@@ -17,7 +17,7 @@ export class ServiceJavaComponent implements OnInit {
   }
 
   // liste des services
-  private list(){
+  private list() {
     this.serviceJavaService.findAll().subscribe(result => {
       console.log(result);
       this.services = result;
@@ -27,8 +27,8 @@ export class ServiceJavaComponent implements OnInit {
   }
 
   // suppression du service par son nom
-  public delete(nomService: string) {
-    this.serviceJavaService.delete(nomService).subscribe(result => {
+  public delete(idService: number) {
+    this.serviceJavaService.delete(idService).subscribe(result => {
       this.list();
     });
   }

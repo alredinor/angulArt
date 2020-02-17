@@ -1,15 +1,19 @@
-<div class="form-group">
+<div class="container">
     <h2>Liste des services</h2>
     <table class="table">
         <tr>
             <th>ID SERVICE</th>
             <th>NOM SERVICE</th>
             <th>METIER</th>
+            <th></th>
+            <th></th>
         </tr>
         <tr *ngFor="let s of services">
             <td>{{s.idService}}</td>
             <td>{{s.nomService}}</td>
             <td>{{s.metier}}</td>
+            <td><button class="=btn btn-info" [routerLink]="['/service','add']" >Editer</button></td>
+            <td><button class="=btn btn-danger"  (click)="delete(s.idService)">Supprimer</button></td>
         </tr>
     </table>
 </div>
