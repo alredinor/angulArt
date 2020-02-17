@@ -1,6 +1,6 @@
 export class Metier {
 
-    constructor(private _idMetier: number, private _titreMetier: string) {
+    constructor(private _idMetier?: number, private _titreMetier?: string) {
     }
 
     get idMetier(): number {
