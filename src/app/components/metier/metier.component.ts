@@ -24,8 +24,8 @@ export class MetierComponent implements OnInit {
     });
   }
 
-  public delete(titreMetier: string) {
-    this.metierService.delete(titreMetier).subscribe( result => {
+  public delete(id: number) {
+    this.metierService.delete(id).subscribe( result => {
       this.list();
     });
   }

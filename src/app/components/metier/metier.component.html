@@ -1,13 +1,15 @@
 <div>
     <h2>Liste des metiers</h2>
-
+    <div>
+        <button class="btn btn-info" [routerLink]="['/metier','add']">Ajout metier</button>
+    </div>
     <table class="table">
         <th>idMetier:</th>
         <th>titre metier:</th>
         <tr *ngFor="let m of metiers">
             <td>{{m.idMetier}}</td>
             <td>{{m.titreMetier}}</td>
-            <td class="btn-outline-danger" (click)="delete(m.titreMetier)">supprimer</td>
+            <td class="btn-outline-danger" (click)="delete(m.idMetier)">supprimer</td>
         </tr>
     </table>
 

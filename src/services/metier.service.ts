@@ -31,9 +31,9 @@ export class MetierService {
     return this.http.get( this.url, this.options);
   }
 
-  public delete(titreMetier: string): Observable<any> {
+  public delete(id: number): Observable<any> {
    // this.authentication();
-    return this.http.delete(`${this.url}/${titreMetier}`, this.options);
+    return this.http.delete(`${this.url}/${id}`, this.options);
   }
 
   public insert(metier: Metier): Observable<any> {

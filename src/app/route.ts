@@ -7,6 +7,7 @@ import {DemandeComponent} from './components/demande/demande.component';
 import {MetierComponent} from './components/metier/metier.component';
 import {AddDemandeComponent} from './components/add-demande/add-demande.component';
 import {ServiceJavaComponent} from './components/service-java/service-java.component';
+import {AddMetierComponent} from './components/add-metier/add-metier.component';
 
 export const routes: Route[] = [
     {path: 'admin', component: AdminComponent},
@@ -16,5 +17,6 @@ export const routes: Route[] = [
     {path: 'demande', component: DemandeComponent},
     {path: 'metier', component: MetierComponent},
     {path: 'service', component: ServiceJavaComponent},
-    {path: 'demande/add', component: AddDemandeComponent}
+    {path: 'demande/add', component: AddDemandeComponent},
+    {path: 'metier/add', component: AddMetierComponent}
 ]
