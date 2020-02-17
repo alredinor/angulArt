@@ -1,5 +1,8 @@
 <div class="container">
     <h2>Liste des services</h2>
+    <div>
+        <button class="=btn btn-primary" [routerLink]="['/service','add']" routerLinkActive="active">Editer</button>
+    </div>
     <table class="table">
         <tr>
             <th>ID SERVICE</th>
@@ -12,8 +15,8 @@
             <td>{{s.idService}}</td>
             <td>{{s.nomService}}</td>
             <td>{{s.metier}}</td>
-            <td><button class="=btn btn-info" [routerLink]="['/service','add']" >Editer</button></td>
-            <td><button class="=btn btn-danger"  (click)="delete(s.idService)">Supprimer</button></td>
+            <td><button class="=btn btn-outline-primary" [routerLink]="['/service','edit']" >Editer</button></td>
+            <td><button class="=btn btn-outline-danger"  (click)="delete(s.idService)">Supprimer</button></td>
         </tr>
     </table>
 </div>
