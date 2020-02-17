@@ -9,9 +9,9 @@ import {Compte} from '../../model/compte';
 export class ClientComponent implements OnInit {
 
   @Input()
-  private newClient: Compte = new Compte('', '', 1, '', '', '', '');
+  private newClient: Compte;
 
-  @Output
+  @Output()
   private enregistrer: EventEmitter<Compte> = new EventEmitter<Compte>();
 
   constructor() { }
