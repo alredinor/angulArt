@@ -6,11 +6,13 @@ import {FormsModule} from '@angular/forms';
 import {RouterModule} from '@angular/router';
 import {HttpClientModule} from '@angular/common/http';
 import { CompteComponent } from './components/compte/compte.component';
+import { MetierComponent } from './components/metier/metier.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CompteComponent
+    CompteComponent,
+    MetierComponent
   ],
   imports: [
     BrowserModule, FormsModule, /*RouterModule.forRoot(routes),*/ HttpClientModule
