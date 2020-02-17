@@ -6,7 +6,6 @@ import {FormsModule} from '@angular/forms';
 import {RouterModule} from '@angular/router';
 import {HttpClientModule} from '@angular/common/http';
 import { CompteComponent } from './components/compte/compte.component';
-import { ServiceComponent } from './components/service/service.component';
 import { ArtisanComponent } from './components/artisan/artisan.component';
 import { ClientComponent } from './components/client/client.component';
 import { DemandeComponent } from './components/demande/demande.component';
@@ -21,7 +20,6 @@ import { ServiceJavaComponent } from './components/service-java/service-java.com
   declarations: [
     AppComponent,
     CompteComponent,
-    ServiceComponent,
     ArtisanComponent,
     ClientComponent,
     DemandeComponent,
