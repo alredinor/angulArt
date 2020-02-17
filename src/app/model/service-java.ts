@@ -1,12 +1,11 @@
 import {Metier} from './metier';
 
-export class Service {
+export class ServiceJava {
     constructor(
-    private _idService: number,
-    private _nomService: string,
-    private _metier: Metier
-    )
-{
+        private _idService: number,
+        private _nomService?: string,
+        private _metier: Metier
+    ) {
     }
 
 

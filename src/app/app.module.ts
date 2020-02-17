@@ -12,6 +12,7 @@ import { ClientComponent } from './components/client/client.component';
 import { DemandeComponent } from './components/demande/demande.component';
 import { AdminComponent } from './components/admin/admin.component';
 import { MetierComponent } from './components/metier/metier.component';
+import { ServiceJavaComponent } from './components/service-java/service-java.component';
 
 
 
@@ -26,6 +27,7 @@ import { MetierComponent } from './components/metier/metier.component';
     DemandeComponent,
     AdminComponent,
     MetierComponent,
+    ServiceJavaComponent,
 
   ],
   imports: [
