@@ -17,7 +17,7 @@ export class DemandeComponent implements OnInit {
     this.list();
   }
 private list(){
-    this.demandeService.findAll().subscribe(result=>{
+    this.demandeService.findAll().subscribe(result => {
       this.demandes = result;
     });
 }
