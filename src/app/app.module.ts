@@ -13,6 +13,7 @@ import { AdminComponent } from './components/admin/admin.component';
 import { MetierComponent } from './components/metier/metier.component';
 import { AddDemandeComponent } from './components/add-demande/add-demande.component';
 import {ServiceJavaComponent} from './components/service-java/service-java.component';
+import {routes} from './route';
 
 
 
@@ -34,7 +35,7 @@ import {ServiceJavaComponent} from './components/service-java/service-java.compo
 
   ],
     imports: [
-        BrowserModule, FormsModule, /*RouterModule.forRoot(routes),*/ HttpClientModule, RouterModule
+        BrowserModule, FormsModule, RouterModule.forRoot(routes), HttpClientModule
     ],
   providers: [],
   bootstrap: [AppComponent]
