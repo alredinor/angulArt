@@ -2,7 +2,8 @@ import {Adresse} from './adresse';
 import {UserRole} from './user-role';
 
 export class Compte {
-constructor(private _login?: string,
+constructor(private _typeCompte?: string,
+            private _login?: string,
             private _mdp?: string,
             private _idCompte?: number,
             private  _email?: string,
@@ -11,6 +12,14 @@ constructor(private _login?: string,
             private _roles?: UserRole,
             ) {
 }
+
+  get typeCompte(): string {
+    return this._typeCompte;
+  }
+
+  set typeCompte(value: string) {
+    this._typeCompte = value;
+  }
 
   get login(): string {
     return this._login;
