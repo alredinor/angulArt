@@ -14,6 +14,7 @@ import { MetierComponent } from './components/metier/metier.component';
 import { AddDemandeComponent } from './components/add-demande/add-demande.component';
 import {ServiceJavaComponent} from './components/service-java/service-java.component';
 import {routes} from './route';
+import {ServiceJavaService} from '../services/service-java-service';
 
 
 
@@ -37,7 +38,7 @@ import {routes} from './route';
     imports: [
         BrowserModule, FormsModule, RouterModule.forRoot(routes), HttpClientModule
     ],
-  providers: [],
+  providers: [ServiceJavaService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
