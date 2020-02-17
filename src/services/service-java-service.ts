@@ -1,7 +1,9 @@
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {ServiceJava} from '../app/model/service-java';
+import {Injectable} from '@angular/core';
 
+@Injectable()
 export class ServiceJavaService {
     private url = 'http://localhost:8080/art/rest/service';
     private headers: HttpHeaders;
