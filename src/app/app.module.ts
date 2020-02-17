@@ -15,6 +15,7 @@ import { AddDemandeComponent } from './components/add-demande/add-demande.compon
 import {ServiceJavaComponent} from './components/service-java/service-java.component';
 import {routes} from './route';
 import {ServiceJavaService} from '../services/service-java-service';
+import { AddMetierComponent } from './components/add-metier/add-metier.component';
 
 
 
@@ -32,6 +33,7 @@ import {ServiceJavaService} from '../services/service-java-service';
     MetierComponent,
     ServiceJavaComponent,
     AddDemandeComponent,
+    AddMetierComponent,
 
 
   ],
