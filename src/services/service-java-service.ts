@@ -33,7 +33,7 @@ export class ServiceJavaService {
     public insert(service: ServiceJava ): Observable<any> {
         this.authentification();
         const o = {
-            'nomService': service.nomService;
+            nomService: service.nomService
         };
         return this.http.post(this.url, o, this.options);
     }
