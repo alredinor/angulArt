@@ -11,6 +11,10 @@ import { ArtisanComponent } from './components/artisan/artisan.component';
 import { ClientComponent } from './components/client/client.component';
 import { DemandeComponent } from './components/demande/demande.component';
 import { AdminComponent } from './components/admin/admin.component';
+import { MetierComponent } from './components/metier/metier.component';
+
+
+
 
 @NgModule({
   declarations: [
@@ -20,7 +24,9 @@ import { AdminComponent } from './components/admin/admin.component';
     ArtisanComponent,
     ClientComponent,
     DemandeComponent,
-    AdminComponent
+    AdminComponent,
+    MetierComponent,
+
   ],
   imports: [
     BrowserModule, FormsModule, /*RouterModule.forRoot(routes),*/ HttpClientModule
