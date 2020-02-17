@@ -9,12 +9,14 @@ import {Router} from '@angular/router';
 })
 export class AddDemandeComponent implements OnInit {
 
-  private demande: Demande = new Demande('100');
+  private demande: Demande = new Demande(500);
 
   constructor(private router: Router, private demandeService) { }
 
-  public save(){
-    this.demandeService.insert(this)
+  public save() {
+    this.demandeService.insert(this.demande).subscribe(resutlt => {
+      this.router.navigate(['/demande']);
+    });
   }
 
   ngOnInit() {
