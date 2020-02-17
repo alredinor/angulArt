@@ -1,6 +1,6 @@
 <div class="container">
     <div>
-        <a class="btn btn-link">Ajout demande</a>
+        <button class="btn btn-info" [routerLink]="['/demande','add']">Ajout demande</button>
     </div>
     <table class="table">
         <tr>
@@ -24,8 +24,8 @@
                 <td>{{d.metier}}</td>
                 <td>{{d.statut}}</td>
                 <td>{{d.date}}</td>
-                <td><button class="=btn btn-outline-info" [routerLink]="['/demande','add']" >nouvelle demande</button></td>
-                <td><a class="btn btn-warning">Supprimer</a></td>
+                <td><button class="=btn btn-outline-info" [routerLink]="['/demande','add']" >editer la demande</button></td>
+                <td><button class="=btn btn-outline-danger"  (click)="delete(d.idDemande)">Supprimer la demande</button></td>
             </tr>
 
     </table>
