@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {Metier} from '../../model/metier';
+import {MetierService} from '../../../service/metier.service';
 
 @Component({
   selector: 'app-metier',
@@ -7,9 +9,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MetierComponent implements OnInit {
 
-  constructor() { }
+  metiers: Metier[] = [];
+
+  constructor(private metierService: MetierService) { }
 
   ngOnInit() {
+  }
+
+  private list() {
+    this.metierService.findAll().subscribe( result => {
+      console.log(result);
+      this.metiers = result;
+    });
+  }
+
+  public delete(titreMetier: string) {
+    this.metierService.delete(titreMetier).subscribe( result => {
+      this.list();
+    });
   }
 
 }
