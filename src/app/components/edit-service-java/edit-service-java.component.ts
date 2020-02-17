@@ -11,7 +11,7 @@ import {ActivatedRoute, Router} from '@angular/router';
 export class EditServiceJavaComponent implements OnInit {
 
   private service: ServiceJava = new ServiceJava();
-  private create: boolean = true;
+  private create = true;
   private serviceOld: ServiceJava = null;
   private index: number;
 
@@ -20,7 +20,7 @@ export class EditServiceJavaComponent implements OnInit {
       if (params.index) {
         this.index = params.index;
         this.create = false;
-        this.service = this.serviceJavaService.serviceJava[params.indx];
+        this.service = this.serviceJavaService.services[params.index];
         this.serviceOld = new ServiceJava(this.service.idService, this.service.nomService, this.service.metier);
       }
     });
@@ -29,4 +29,18 @@ export class EditServiceJavaComponent implements OnInit {
   ngOnInit() {
   }
 
+  public save() {
+    if (this.create) {
+      this.serviceJavaService.ajoutServiceJava(this.service);
+    }
+    this.router.navigate(['/editServiceJava']);
+  }
+
+  public cancel() {
+    if (!this.create) {
+      // this.clientService.clients[this.index] = this.clientOld;
+      this.serviceJavaService.services[this.index] = this.serviceOld ;
+    }
+    this.router.navigate(['/editServiceJava']);
+  }
 }
