@@ -8,7 +8,7 @@ import {Metier} from '../app/model/metier';
 })
 export class MetierService {
 
-  private url: string = 'http://localhost:8080/demo/rest/metier';
+  private url: string = 'http://localhost:8080/art/rest/metier';
   private headers: HttpHeaders;
   private options: Object;
 
@@ -19,7 +19,7 @@ export class MetierService {
   private authentication() {
     this.headers = new HttpHeaders({
       'Content-type':'application/json',
-      'Authorization':'Basic '+btoa( 'postgres:root')
+      'Authorization':'Basic '+ btoa( 'postgres:root')
     });
     this.options = {
       headers: this.headers
