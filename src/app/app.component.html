@@ -1,7 +1,23 @@
-<app-client></app-client>
-<app-metier></app-metier>
-<app-admin></app-admin>
-<app-artisan></app-artisan>
-<app-compte></app-compte>
-<app-demande></app-demande>
-<app-service-java></app-service-java>
+<header>
+    Entete de la page principale
+</header>
+<nav>
+    <ul id="menu">
+        <li><a [routerLink]="['/artisan']" routerLinkActive="active" class="btn btn-link">Artisan</a></li>
+        <li><a [routerLink]="['/client']" routerLinkActive="active" class="btn btn-link">Client</a></li>
+        <li><a [routerLink]="['/metier']" routerLinkActive="active" class="btn btn-link">metier</a></li>
+        <li><a [routerLink]="['/service']" routerLinkActive="active" class="btn btn-link">Services</a></li>
+    </ul>
+</nav>
+
+<router-outlet></router-outlet>
+
+<footer>Pied de page</footer>
+
+<!--<app-client></app-client>-->
+<!--<app-metier></app-metier>-->
+<!--<app-admin></app-admin>-->
+<!--<app-artisan></app-artisan>-->
+<!--<app-compte></app-compte>-->
+<!--<app-demande></app-demande>-->
+<!--<app-service-java></app-service-java>-->

@@ -16,7 +16,7 @@ export class ServiceJavaService {
     private authentification() {
         this.headers = new  HttpHeaders({
             'Content-Type': 'application/json',
-            Authorization: 'Basic ' + sessionStorage.getItem('user') // btoa pour crypter le mot de passe
+            'Authorization': 'Basic ' + sessionStorage.getItem('user') // btoa pour crypter le mot de passe
         });
         this.options = {headers: this.headers};
     }
