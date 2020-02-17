@@ -9,7 +9,7 @@ import {Compte} from '../../model/compte';
 export class ClientComponent implements OnInit {
 
   @Input()
-  private newClient: Compte;
+  private newClient: Compte = new Compte();
 
   @Output()
   private enregistrer: EventEmitter<Compte> = new EventEmitter<Compte>();
