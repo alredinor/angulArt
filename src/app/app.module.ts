@@ -33,9 +33,9 @@ import {ServiceJavaComponent} from './components/service-java/service-java.compo
 
 
   ],
-  imports: [
-    BrowserModule, FormsModule, /*RouterModule.forRoot(routes),*/ HttpClientModule
-  ],
+    imports: [
+        BrowserModule, FormsModule, /*RouterModule.forRoot(routes),*/ HttpClientModule, RouterModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })
