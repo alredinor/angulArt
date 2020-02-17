@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import {Metier} from '../../model/metier';
+import {Compte} from '../../model/compte';
+import {Router} from '@angular/router';
+import {CompteService} from '../../../services/compte.service';
 
 @Component({
   selector: 'app-add-compte',
@@ -7,7 +11,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddCompteComponent implements OnInit {
 
-  constructor() { }
+  private compte: Compte = new Compte();
+
+  constructor(private router: Router, private compteService: CompteService) {
+
+  }
+
+  public save() {
+    this.compteService.insert(this.compte).subscribe(resutlt => {
+      this.router.navigate(['/compte']);
+    });
+  }
 
   ngOnInit() {
   }

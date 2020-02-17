@@ -1,1 +1,32 @@
-<p>add-compte works!</p>
+<div>
+    <h2>creation d'un compte</h2>
+    <div class="form-group">
+        idMetier:<input class="form-control" [(ngModel)]="compte.typeCompte">
+    </div>
+    <div class="form-group">
+        Titre du metier:<input class="form-control" [(ngModel)]="compte.idCompte">
+    </div>
+    <div class="form-group">
+        Titre du metier:<input class="form-control" [(ngModel)]="compte.login">
+    </div>
+    <div class="form-group">
+        Titre du metier:<input class="form-control" [(ngModel)]="compte.mdp">
+    </div>
+    <div class="form-group">
+        Titre du metier:<input class="form-control" [(ngModel)]="compte.email">
+    </div>
+    <div class="form-group">
+        Titre du metier:<input class="form-control" [(ngModel)]="compte.adresse">
+    </div>
+    <div class="form-group">
+        Titre du metier:<input class="form-control" [(ngModel)]="compte.enable">
+    </div>
+    <div class="form-group">
+        Titre du metier:<input class="form-control" [(ngModel)]="compte.roles">
+    </div>
+
+    <div class="form-group">
+        <button class ="btn btn-outline-primary" (click)="save()" routerLinkActive="active"> enregistrer</button>
+    </div>
+    <button [routerLink]="['/compte']" class ="btn btn-outline-warning" routerLinkActive="active">annuler</button>
+</div>
