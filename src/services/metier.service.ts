@@ -10,13 +10,13 @@ export class MetierService {
 
   private url: string = 'http://localhost:8080/art/rest/metier';
   private headers: HttpHeaders;
-  private options: Object;
+  private options: object;
 
   constructor(private http: HttpClient) {
 
   }
 
-  private authentication() {
+ /* private authentication() {
     this.headers = new HttpHeaders({
       'Content-type':'application/json',
       'Authorization':'Basic '+ btoa( 'postgres:root')
@@ -24,22 +24,23 @@ export class MetierService {
     this.options = {
       headers: this.headers
     }
-  }
+  }*/
 
   public findAll(): Observable<any> {
-    this.authentication();
+    //this.authentication();
     return this.http.get( this.url, this.options);
   }
 
   public delete(titreMetier: string): Observable<any> {
-    this.authentication();
+   // this.authentication();
     return this.http.delete(`${this.url}/${titreMetier}`, this.options);
   }
 
   public insert(metier: Metier): Observable<any> {
-    this.authentication();
+   // this.authentication();
     const o: object = {
-      'nom': metier.titreMetier
+      id: metier.idMetier,
+      nom: metier.titreMetier
     };
     return this.http.post(this.url, o, this.options);
   }

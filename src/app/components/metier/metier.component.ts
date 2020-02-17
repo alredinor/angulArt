@@ -14,11 +14,12 @@ export class MetierComponent implements OnInit {
   constructor(private metierService: MetierService) { }
 
   ngOnInit() {
+    this.list();
   }
 
   private list() {
     this.metierService.findAll().subscribe( result => {
-      console.log(result);
+      //console.log(result);
       this.metiers = result;
     });
   }

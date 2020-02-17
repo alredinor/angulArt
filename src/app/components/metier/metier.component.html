@@ -2,7 +2,10 @@
     <h2>Liste des metiers</h2>
 
     <table class="table">
+        <th>idMetier:</th>
+        <th>titre metier:</th>
         <tr *ngFor="let m of metiers">
+            <td>{{m.idMetier}}</td>
             <td>{{m.titreMetier}}</td>
             <td class="btn-outline-danger" (click)="delete(m.titreMetier)">supprimer</td>
         </tr>
