@@ -1,11 +1,11 @@
 import {Compte} from './compte';
 import {Metier} from './metier';
 import {StatutDemande} from '../statut-demande.enum';
-import {Service} from './service';
+import {ServiceJava} from './service-java';
 
 export class Demande {
     constructor(private _idDemande: number, private _message: string, private _artisan: Compte, private _client: Compte,
-                private _service: Service, private _metier: Metier, private _statut: StatutDemande, private _date: Date)
+                private _service: ServiceJava, private _metier: Metier, private _statut: StatutDemande, private _date: Date)
     {
     }
 
@@ -41,11 +41,12 @@ export class Demande {
         this._client = value;
     }
 
-    get service(): Service {
+
+    get service(): ServiceJava {
         return this._service;
     }
 
-    set service(value: Service) {
+    set service(value: ServiceJava) {
         this._service = value;
     }
 
@@ -72,4 +73,7 @@ export class Demande {
     set date(value: Date) {
         this._date = value;
     }
+}
+
+
 }

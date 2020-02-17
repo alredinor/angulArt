@@ -1,1 +1,32 @@
-<p>demande works!</p>
+<div class="container">
+    <div>
+        <a class="btn btn-link">Ajout demande</a>
+    </div>
+    <table class="table">
+        <tr>
+            <th>Id demande</th>
+            <th>Message</th>
+            <th>Artisan</th>
+            <th>Client</th>
+            <th>Service</th>
+            <th>Metier</th>
+            <th>Statut</th>
+            <th>Date</th>
+            <th></th>
+            <th></th>
+        </tr>
+            <tr *ngFor="let d of demandes">
+                <td>{d.idDemande}</td>
+                <td>{d.message}</td>
+                <td>{d.artisan}</td>
+                <td>{d.client}</td>
+                <td>{d.service}</td>
+                <td>{d.metier}</td>
+                <td>{d.statut}</td>
+                <td>{d.date}</td>
+                <td><a class="btn btn-info">Editer</a></td>
+                <td><a class="btn btn-warning">Supprimer</a></td>
+            </tr>
+
+    </table>
+</div>
