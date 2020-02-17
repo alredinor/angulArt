@@ -18,6 +18,7 @@ import {ServiceJavaService} from '../services/service-java-service';
 import { AddMetierComponent } from './components/add-metier/add-metier.component';
 import { AddServiceJavaComponent } from './components/add-service-java/add-service-java.component';
 import { EditServiceJavaComponent } from './components/edit-service-java/edit-service-java.component';
+import {AddCompteComponent} from './components/add-compte/add-compte.component';
 
 
 
@@ -38,6 +39,7 @@ import { EditServiceJavaComponent } from './components/edit-service-java/edit-se
     AddMetierComponent,
     AddServiceJavaComponent,
     EditServiceJavaComponent,
+    AddCompteComponent,
 
 
   ],
