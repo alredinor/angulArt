@@ -8,6 +8,7 @@ export class ServiceJavaService {
     private url = 'http://localhost:8080/art/rest/service';
     private headers: HttpHeaders;
     private options: object;
+    private services: ServiceJava [] = [];
 
     constructor(private http: HttpClient) {
     }
@@ -27,9 +28,9 @@ export class ServiceJavaService {
         return  this.http.get(this.url, this.options);
     }
 
-    public delete(nomService: number): Observable<any> {
+    public delete(idService: number): Observable<any> {
         this.authentification()
-        return this.http.delete(this.url + '/' + nomService, this.options);
+        return this.http.delete(this.url + '/' + idService, this.options);
     }
 
     public insert(service: ServiceJava ): Observable<any> {
@@ -38,5 +39,9 @@ export class ServiceJavaService {
             nomService: service.nomService
         };
         return this.http.post(this.url, o, this.options);
+    }
+
+    public ajoutServiceJava(service: ServiceJava) {
+        this.services.push(service);
     }
 }

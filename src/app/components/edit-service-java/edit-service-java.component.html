@@ -1,1 +1,17 @@
-<p>edit-service-java works!</p>
+<div class="container">
+    <h2>Editer le service</h2>
+    <div class="form-group">
+        ID Service : <input [(ngModel)]="service.idService" class="form-control" readonly>
+    </div>
+    <div class="form-group">
+        Nom Service : <input [(ngModel)]="service.nomService" class="form-control">
+    </div>
+    <div class="form-group">
+        Metier : <input [(ngModel)]="service.metier" class="form-control" readonly>
+    </div>
+    <div class="form-group">
+        <button (click)="save()" class="btn btn-outline-primary">Enregistrer</button>
+        <button (click)="cancel()" class="btn btn-outline-warning">Annuler</button>
+    </div>
+</div>
+
