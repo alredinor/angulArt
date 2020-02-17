@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Metier} from '../../model/metier';
-import {MetierService} from '../../../service/metier.service';
+import {MetierService} from '../../../services/metier.service';
 
 @Component({
   selector: 'app-metier',
