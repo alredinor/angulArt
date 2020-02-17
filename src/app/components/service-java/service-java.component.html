@@ -6,10 +6,10 @@
             <th>NOM SERVICE</th>
             <th>METIER</th>
         </tr>
-        <tr>
-            <td [(ngModel)]=""></td>
-            <td [(ngModel)]=""></td>
-            <td [(ngModel)]=""></td>
+        <tr *ngFor="let s of services">
+            <td>{{s.idService}}</td>
+            <td>{{s.nomService}}</td>
+            <td>{{s.metier}}</td>
         </tr>
     </table>
 </div>
