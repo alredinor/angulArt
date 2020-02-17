@@ -9,6 +9,7 @@ import {AddDemandeComponent} from './components/add-demande/add-demande.componen
 import {ServiceJavaComponent} from './components/service-java/service-java.component';
 import {AddMetierComponent} from './components/add-metier/add-metier.component';
 import {AddServiceJavaComponent} from './components/add-service-java/add-service-java.component';
+import {AddCompteComponent} from './components/add-compte/add-compte.component';
 
 export const routes: Route[] = [
     {path: 'admin', component: AdminComponent},
@@ -20,5 +21,6 @@ export const routes: Route[] = [
     {path: 'service', component: ServiceJavaComponent},
     {path: 'service/add', component: AddServiceJavaComponent},
     {path: 'demande/add', component: AddDemandeComponent},
-    {path: 'metier/add', component: AddMetierComponent}
+    {path: 'metier/add', component: AddMetierComponent},
+    {path: 'compte/add', component: AddCompteComponent}
 ]
