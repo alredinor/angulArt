@@ -19,12 +19,12 @@ export class ArtisanComponent implements OnInit {
   ngOnInit() {
   }
 
-  public display(): boolean {
+  /*public display(): boolean {
     if(this.newArtisan.login && this.newArtisan.mdp && this.newArtisan.idCompte && this.newArtisan.email && this.newArtisan.adresse && this.newArtisan.enable && this.newArtisan.roles) {
       return true;
     }
     return false;
-  }
+  }*/
 
   public AjouterArtisan(newArtisan) {
     this.enregistrer.emit(this.newArtisan);

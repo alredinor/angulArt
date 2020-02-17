@@ -19,12 +19,12 @@ export class ClientComponent implements OnInit {
   ngOnInit() {
   }
 
-  public display(): boolean {
+ /* public display(): boolean {
     if(this.newClient.login && this.newClient.mdp && this.newClient.idCompte && this.newClient.email && this.newClient.adresse && this.newClient.enable && this.newClient.roles) {
       return true;
     }
     return false;
-  }
+  }*/
 
   public AjouterClient(newClient) {
     this.enregistrer.emit(this.newClient);

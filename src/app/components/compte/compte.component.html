@@ -1,1 +1,26 @@
-<p>compte works!</p>
+<div>
+    <h2>Liste des comptes</h2>
+    <div>
+        <button class="btn btn-info" [routerLink]="['/compte','add']">Ajout compte</button>
+    </div>
+    <table class="table">
+        <th>idCompte:</th>
+        <th>Login:</th>
+        <th>Password:</th>
+        <th>Email:</th>
+        <th>Adresse:</th>
+        <th>enable:</th>
+        <th>roles:</th>
+        <tr *ngFor="let c of comptes">
+            <td>{{c.idCompte}}</td>
+            <td>{{c.login}}</td>
+            <td>{{c.mdp}}</td>
+            <td>{{c.email}}</td>
+            <td>{{c.adresse}}</td>
+            <td>{{c.enable}}</td>
+            <td>{{c.roles}}</td>
+            <td class="btn-outline-danger" (click)="delete(c.idCompte)">supprimer</td>
+        </tr>
+    </table>
+
+</div>

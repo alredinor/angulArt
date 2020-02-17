@@ -27,7 +27,7 @@ export class ServiceJavaService {
         return  this.http.get(this.url, this.options);
     }
 
-    public delete(nomService: string): Observable<any> {
+    public delete(nomService: number): Observable<any> {
         this.authentification()
         return this.http.delete(this.url + '/' + nomService, this.options);
     }

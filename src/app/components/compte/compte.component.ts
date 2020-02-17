@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {Compte} from '../../model/compte';
+import {CompteService} from '../../../services/compte.service';
 
 @Component({
   selector: 'app-compte',
@@ -7,9 +9,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CompteComponent implements OnInit {
 
-  constructor() { }
+  comptes: Compte[] = [];
+
+  constructor(private compteService: CompteService) {
+
+  }
 
   ngOnInit() {
+    this.list();
+  }
+
+  private list() {
+    this.compteService.findAll().subscribe( result => {
+      //console.log(result);
+      this.comptes = result;
+    });
+  }
+
+  public delete(id: number) {
+    this.compteService.delete(id).subscribe( result => {
+      this.list();
+    });
   }
 
 }
