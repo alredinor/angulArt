@@ -32,5 +32,20 @@ public delete(id: number): Observable<any>{
 
   return this.http.delete(this.url + '/' + id, this.options) ;
 }
+  public insert(demande: Demande): Observable<any> {
+    // this.authentification()
+    const  o: object = {
+      id: demande.idDemande,
+      idClient: demande.client,
+      idArtisan: demande.artisan,
+      date: demande.date,
+      statut: demande.statut,
+      metier: demande.metier,
+      service: demande.service,
+      message: demande.message
+
+    };
+    return this.http.post(this.url, o, this.options);
+  }
 }
 
