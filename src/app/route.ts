@@ -12,6 +12,8 @@ import {AddServiceJavaComponent} from './components/add-service-java/add-service
 import {AddCompteComponent} from './components/add-compte/add-compte.component';
 import {EditServiceJavaComponent} from './components/edit-service-java/edit-service-java.component';
 import {EditDemandeComponent} from './edit-demande/edit-demande.component';
+import {AddArtisanComponent} from './components/add-artisan/add-artisan.component';
+import {AddClientComponent} from './components/add-client/add-client.component';
 
 export const routes: Route[] = [
     {path: 'admin', component: AdminComponent},
@@ -26,5 +28,7 @@ export const routes: Route[] = [
     {path: 'demande/add', component: AddDemandeComponent},
     {path: 'metier/add', component: AddMetierComponent},
     {path: 'compte/add', component: AddCompteComponent},
-    {path: 'demande/edit', component: EditDemandeComponent}
+    {path: 'demande/edit', component: EditDemandeComponent},
+    {path: 'compte/addArtisan', component: AddArtisanComponent},
+    {path: 'compte/addClient', component: AddClientComponent}
 ]
