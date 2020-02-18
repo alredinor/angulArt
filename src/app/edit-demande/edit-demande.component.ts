@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
 import {DemandeService} from '../../services/demande.service';
 import {Demande} from '../model/demande';
+import {StatutDemande} from '../statut-demande.enum';
 
 @Component({
   selector: 'app-edit-demande',
@@ -14,6 +15,7 @@ export class EditDemandeComponent implements OnInit {
   private create = true;
   private demandeOld: Demande = null;
   private index: number;
+  private statut: StatutDemande;
 
   constructor(private router: Router, private activatedRoute: ActivatedRoute, private demandeService: DemandeService) {
     this.activatedRoute.params.subscribe(params => {
@@ -27,11 +29,12 @@ export class EditDemandeComponent implements OnInit {
     });
   }
   public save() {
-    this.demandeService.insert(this.demande).subscribe(resutlt => {
-      this.router.navigate(['/demande']);
-    });
+    if (this.create) {
+      this.demandeService.edit(this.demande, this.demande.idDemande).subscribe(resutlt => {
+        this.router.navigate(['/demande']);
+      });
+    }
   }
-
   ngOnInit() {
   }
 
