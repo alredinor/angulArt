@@ -9,11 +9,9 @@ import {MetierService} from '../../../services/metier.service';
 })
 export class MetierComponent implements OnInit {
 
-  metiers: Metier[] = [];
+  private metiers: Metier[] = [];
 
-  constructor(private metierService: MetierService) {
-
-  }
+  constructor(private metierService: MetierService) { }
 
   ngOnInit() {
     this.list();
@@ -21,7 +19,6 @@ export class MetierComponent implements OnInit {
 
   private list() {
     this.metierService.findAll().subscribe( result => {
-      //console.log(result);
       this.metiers = result;
     });
   }

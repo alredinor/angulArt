@@ -10,7 +10,7 @@ import {Client} from '../app/model/client';
 })
 export class CompteService {
 
-  private url: string = 'http://localhost:8080/art/rest/compte';
+  private url = 'http://localhost:8080/art/rest/compte';
   private headers: HttpHeaders;
   private options: object;
 
@@ -53,7 +53,6 @@ export class CompteService {
   public insertArtisan(artisan: Artisan): Observable<any> {
     // this.authentication();
     const o: object = {
-      id: artisan.idCompte,
       login: artisan.login,
       mdp: artisan.mdp,
       email: artisan.email,
@@ -67,7 +66,6 @@ export class CompteService {
   public insertClient(client: Client): Observable<any> {
     // this.authentication();
     const o: object = {
-      id: client.idCompte,
       login: client.login,
       mdp: client.mdp,
       email: client.email,
