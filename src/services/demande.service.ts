@@ -7,7 +7,7 @@ import {Observable} from 'rxjs';
   providedIn: 'root'
 })
 export class DemandeService {
-
+  demandes: Demande[] = [new Demande()];
   private url = 'http://localhost:8080/art/rest/demande'
   private headers: HttpHeaders;
   private options: object;
