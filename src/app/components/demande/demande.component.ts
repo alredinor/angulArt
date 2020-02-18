@@ -16,7 +16,7 @@ export class DemandeComponent implements OnInit {
   ngOnInit() {
     this.list();
   }
-private list(){
+private list() {
     this.demandeService.findAll().subscribe(result => {
       this.demandes = result;
     });
