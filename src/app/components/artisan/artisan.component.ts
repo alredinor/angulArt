@@ -14,7 +14,8 @@ export class ArtisanComponent implements OnInit {
   @Output()
   private enregistrer: EventEmitter<Compte> = new EventEmitter<Compte>();
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
   }
@@ -29,6 +30,9 @@ export class ArtisanComponent implements OnInit {
   public AjouterArtisan(newArtisan) {
     this.enregistrer.emit(this.newArtisan);
     this.newArtisan = new Compte();
+  }
+
+  public edit() {
   }
 
 }
