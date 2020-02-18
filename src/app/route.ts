@@ -15,6 +15,7 @@ import {AddArtisanComponent} from './components/add-artisan/add-artisan.componen
 import {AddClientComponent} from './components/add-client/add-client.component';
 import {HomeComponent} from './components/home/home.component';
 import {EditDemandeComponent} from './components/edit-demande/edit-demande.component';
+import {OffreComponent} from './components/offre/offre.component';
 
 export const routes: Route[] = [
     {path: 'admin', component: AdminComponent},
@@ -32,5 +33,6 @@ export const routes: Route[] = [
     {path: 'demande/edit', component: EditDemandeComponent},
     {path: 'compte/addArtisan', component: AddArtisanComponent},
     {path: 'compte/addClient', component: AddClientComponent},
-    {path: 'home', component: HomeComponent}
+    {path: 'home', component: HomeComponent},
+    {path: 'offre', component: OffreComponent}
 ]
