@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {Demande} from '../app/model/demande';
+import {Offre} from '../app/model/offre';
 
 @Injectable({
   providedIn: 'root'
@@ -9,6 +10,7 @@ import {Demande} from '../app/model/demande';
 export class OffreService {
 
   private url = 'http://localhost:8080/art/rest/offre'
+  private headers: HttpHeaders;
   private options: object;
   constructor(private http: HttpClient) {
   }
