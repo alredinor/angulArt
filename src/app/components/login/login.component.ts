@@ -9,13 +9,13 @@ export class LoginComponent implements OnInit {
 
   /*private user: User = new User();
 
-  private error = false;
+  private error = false;*/
 
-  constructor(private loginService: LoginService, private router: Router) { }
+  constructor() { }
 
   ngOnInit() {
   }
-  public send() {
+  /*public send() {
     this.loginService.login(this.user).subscribe(result => {
       sessionStorage.setItem('user', `${this.user.login}:${this.user.password}`);
       this.router.navigate(['/home']);
