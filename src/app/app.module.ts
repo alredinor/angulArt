@@ -23,6 +23,7 @@ import { EditDemandeComponent } from './components/edit-demande/edit-demande.com
 import { AddArtisanComponent } from './components/add-artisan/add-artisan.component';
 import { AddClientComponent } from './components/add-client/add-client.component';
 import { HomeComponent } from './components/home/home.component';
+import { LoginComponent } from './components/login/login.component';
 
 
 
@@ -48,6 +49,7 @@ import { HomeComponent } from './components/home/home.component';
     AddArtisanComponent,
     AddClientComponent,
     HomeComponent,
+    LoginComponent,
 
 
   ],

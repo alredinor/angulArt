@@ -9,7 +9,7 @@ import {CompteService} from '../../../services/compte.service';
 })
 export class CompteComponent implements OnInit {
 
-  comptes: Compte[] = [];
+ private comptes: Compte[] = [];
 
   constructor(private compteService: CompteService) {
 
