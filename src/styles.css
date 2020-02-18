@@ -11,7 +11,7 @@
     position: fixed;
 }
 body{
-    background-image: url(/assets/images/artisan/wood.jpg) ;
+    background-image: url(src/assets/images/home/wood.jpg) ;
     background-repeat: no-repeat;
     background-size: 100% 100% ;
     background-attachment: fixed;
