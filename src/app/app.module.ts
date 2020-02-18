@@ -22,6 +22,7 @@ import {AddCompteComponent} from './components/add-compte/add-compte.component';
 import { EditDemandeComponent } from './edit-demande/edit-demande.component';
 import { AddArtisanComponent } from './components/add-artisan/add-artisan.component';
 import { AddClientComponent } from './components/add-client/add-client.component';
+import { HomeComponent } from './components/home/home.component';
 
 
 
@@ -46,6 +47,7 @@ import { AddClientComponent } from './components/add-client/add-client.component
     EditDemandeComponent,
     AddArtisanComponent,
     AddClientComponent,
+    HomeComponent,
 
 
   ],
