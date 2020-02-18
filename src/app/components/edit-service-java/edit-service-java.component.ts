@@ -20,7 +20,7 @@ export class EditServiceJavaComponent implements OnInit {
       if (params.index) {
         this.index = params.index;
         this.create = false;
-        this.service = this.serviceJavaService.services[params.index];
+        // this.service = this.serviceJavaService.services[params.index];
         this.serviceOld = new ServiceJava(this.service.idService, this.service.nomService, this.service.metier);
       }
     });
@@ -39,7 +39,7 @@ export class EditServiceJavaComponent implements OnInit {
   public cancel() {
     if (!this.create) {
       // this.clientService.clients[this.index] = this.clientOld;
-      this.serviceJavaService.services[this.index] = this.serviceOld ;
+      // this.serviceJavaService.services[this.index] = this.serviceOld ;
     }
     this.router.navigate(['/editServiceJava']);
   }
