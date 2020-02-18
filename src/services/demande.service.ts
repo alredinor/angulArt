@@ -15,27 +15,27 @@ export class DemandeService {
   // private demandes: Demande[] = [new Demande('500', 'test',
   //     200, 100, '','','','')]
 
-get demandes(): Demande[] {
-  return this._demandes;
-}
+  get demandes(): Demande[] {
+    return this._demandes;
+  }
   constructor(private http: HttpClient) {
   }
-// private authentification(){
-//     this.headers = new HttpHeaders({ 'Content-Type': 'application/json',
-//       'Authorization': 'Basic ' + sessionStorage.getItem('user')});
-//     this.options = {headers: this.headers};
-// }
-public findAll(): Observable<any> {
-    // this.authentification()
-  return this.http.get(this.url, this.options);
-}
+  private authentification(){
+    this.headers = new HttpHeaders({ 'Content-Type': 'application/json',
+      'Authorization': 'Basic ' + sessionStorage.getItem('user')});
+    this.options = {headers: this.headers};
+  }
+  public findAll(): Observable<any> {
+    this.authentification()
+    return this.http.get(this.url, this.options);
+  }
 
-public delete(id: number): Observable<any>{
+  public delete(id: number): Observable<any>{
 
-  return this.http.delete(this.url + '/' + id, this.options) ;
-}
+    return this.http.delete(this.url + '/' + id, this.options) ;
+  }
   public insert(demande: Demande): Observable<any> {
-    // this.authentification()
+    this.authentification()
     const  o: object = {
       id: demande.idDemande,
       idClient: demande.client,
@@ -51,7 +51,7 @@ public delete(id: number): Observable<any>{
   }
 
   public edit(demande: Demande, id: number): Observable<any> {
-    // this.authentification()
+    this.authentification()
     const  o: object = {
       id: demande.idDemande,
       idClient: demande.client,
