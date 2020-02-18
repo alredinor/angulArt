@@ -14,6 +14,7 @@ import {EditServiceJavaComponent} from './components/edit-service-java/edit-serv
 import {EditDemandeComponent} from './components/edit-demande/edit-demande.component';
 import {AddArtisanComponent} from './components/add-artisan/add-artisan.component';
 import {AddClientComponent} from './components/add-client/add-client.component';
+import {HomeComponent} from './components/home/home.component';
 
 export const routes: Route[] = [
     {path: 'admin', component: AdminComponent},
@@ -30,5 +31,6 @@ export const routes: Route[] = [
     {path: 'compte/add', component: AddCompteComponent},
     {path: 'demande/edit', component: EditDemandeComponent},
     {path: 'compte/addArtisan', component: AddArtisanComponent},
-    {path: 'compte/addClient', component: AddClientComponent}
+    {path: 'compte/addClient', component: AddClientComponent},
+    {path: 'home', component: HomeComponent}
 ]
