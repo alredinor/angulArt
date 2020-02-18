@@ -1,1 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+#reseau {
+    text-align: right;
+    padding-top: 20px;
+    position: fixed;
+    bottom: 0;
+}
+#footer{
+    min-height: 100px;
+    padding: 20px 10px;
+    position: fixed;
+}
