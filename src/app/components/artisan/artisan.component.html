@@ -12,39 +12,31 @@
    <div>
       <div style=" margin-left: auto; margin-right: auto; width: 250px">
           <img src="/assets/images/artisan/createtask.png" alt="image" style="width: 50px; ">
-          <a id="créer" class="btn btn-dark" style="width: 200px;" [routerLink]="['/demande/edit']" routerLinkActive="active">créer une demande</a>
-       </div>
+          <button id="créer" class="btn btn-dark" style="width: 200px;" [routerLink]="['/demande/edit']" routerLinkActive="active">créer une demande</button>
+      </div>
 
-   </div>
-
-    <div>
       <div  style=" margin-left: auto; margin-right: auto; width: 250px">
         <img src="/assets/images/artisan/change.png" alt="commitment 1" style="width: 50px;">
-        <button id="modifier" class="btn btn-dark" style="width: 200px;">modifier une demande</button>
+        <button id="modifier" class="btn btn-dark" style="width: 200px;" [routerLink]="['/demande']" routerLinkActive="active">modifier une demande</button>
       </div>
-    </div>
 
-    <div>
       <div style=" margin-left: auto; margin-right: auto; width: 250px">
         <img src="/assets/images/artisan/validation.png" alt="commitment 1" style="width: 50px;">
-        <button id="valider" class="btn btn-dark" style="width: 200px;">valider une demande</button>
+        <button id="valider" class="btn btn-dark" style="width: 200px;" [routerLink]="['/demande/edit']" routerLinkActive="active">valider une demande</button>
       </div>
-    </div>
 
-    <div>
       <div style=" margin-left: auto; margin-right: auto; width: 250px">
         <img src="/assets/images/artisan/show.png" alt="commitment 1" style="width: 50px;">
-        <button id="consulter" class="btn btn-dark" style="width: 200px;">consulter une demande</button>
+        <button id="consulter" class="btn btn-dark" style="width: 200px;" [routerLink]="['/demande/edit']" routerLinkActive="active">consulter une demande</button>
       </div>
-    </div>
 
-    <div>
       <div style=" margin-left: auto; margin-right: auto; width: 250px">
         <img src="/assets/images/artisan/modifier.png" alt="image" style="width: 50px;">
-        <button id="modifierprofil" class="btn btn-dark" style="width: 200px;">modifier son profil</button>
+        <button id="modifierprofil" class="btn btn-dark" style="width: 200px;" [routerLink]="['/demande/edit']" routerLinkActive="active">modifier son profil</button>
       </div>
+
     </div>
-    <div style="clear: both; float: none; height: 0;"></div>
+
   </div>
 
 </div>
