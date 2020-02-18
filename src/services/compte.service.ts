@@ -39,7 +39,7 @@ export class CompteService {
 
   public insert(compte: Compte): Observable<any> {
     const o: object = {
-      id: compte.idCompte,
+      idCompte: compte.idCompte,
       login: compte.login,
       mdp: compte.mdp,
       email: compte.email,
@@ -53,6 +53,7 @@ export class CompteService {
   public insertArtisan(artisan: Artisan): Observable<any> {
     // this.authentication();
     const o: object = {
+      idCompte: artisan.idCompte,
       login: artisan.login,
       mdp: artisan.mdp,
       email: artisan.email,
@@ -66,6 +67,7 @@ export class CompteService {
   public insertClient(client: Client): Observable<any> {
     // this.authentication();
     const o: object = {
+      idCompte: client.idCompte,
       login: client.login,
       mdp: client.mdp,
       email: client.email,

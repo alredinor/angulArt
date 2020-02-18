@@ -8,25 +8,30 @@ import {Metier} from '../app/model/metier';
 })
 export class MetierService {
 
+  _metiers: Metier[] = [new Metier()];
   private url: string = 'http://localhost:8080/art/rest/metier';
   private headers: HttpHeaders;
   private options: object;
 
+  get metiers(): Metier[] {
+    return this._metiers;
+  }
   constructor(private http: HttpClient) {
 
   }
 
- /* private authentication() {
+  private authentication() {
     this.headers = new HttpHeaders({
       'Content-type':'application/json',
-      'Authorization':'Basic '+ btoa( 'postgres:root')
+      'Authorization':'Basic '+ sessionStorage.getItem('user')
     });
     this.options = {
       headers: this.headers
     }
-  }*/
+  }
 
   public findAll(): Observable<any> {
+    this.authentication();
     return this.http.get( this.url, this.options);
   }
 
@@ -35,9 +40,10 @@ export class MetierService {
   }
 
   public insert(metier: Metier): Observable<any> {
+    this.authentication();
     const o: object = {
-      id: metier.idMetier,
-      nom: metier.titreMetier
+      idMetier: metier.idMetier,
+      titreMetier: metier.titreMetier
     };
     return this.http.post(this.url + '/addMetier', o, this.options);
   }
