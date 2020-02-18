@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
-import {DemandeService} from '../../services/demande.service';
-import {Demande} from '../model/demande';
-import {StatutDemande} from '../statut-demande.enum';
+import {DemandeService} from '../../../services/demande.service';
+import {Demande} from '../../model/demande';
+import {StatutDemande} from '../../statut-demande.enum';
 
 @Component({
   selector: 'app-edit-demande',

@@ -21,7 +21,6 @@ export class CompteComponent implements OnInit {
 
   private list() {
     this.compteService.findAll().subscribe( result => {
-      //console.log(result);
       this.comptes = result;
     });
   }

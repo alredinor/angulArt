@@ -29,13 +29,25 @@ export class CompteService {
   }*/
 
   public findAll(): Observable<any> {
-    //this.authentication();
     return this.http.get( this.url, this.options);
   }
 
   public delete(id: number): Observable<any> {
     // this.authentication();
     return this.http.delete(`${this.url}/${id}`, this.options);
+  }
+
+  public insert(compte: Compte): Observable<any> {
+    const o: object = {
+      id: compte.idCompte,
+      login: compte.login,
+      mdp: compte.mdp,
+      email: compte.email,
+      adresse: compte.adresse,
+      enable: compte.enable,
+      role: compte.roles
+    };
+    return this.http.post(this.url, o, this.options);
   }
 
   public insertArtisan(artisan: Artisan): Observable<any> {
