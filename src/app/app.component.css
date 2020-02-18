@@ -1,3 +1,15 @@
 #menu>li{
     display: inline-block;
 }
+#logo img {
+    position: absolute;
+    top: 0;
+    max-height: 110px;
+    max-width: 130px;
+}
+/*#banniere {*/
+/*    min-height: 190px;*/
+/*    !*background-image: url(src/assets/images/home/imgParis.jpg);*!*/
+/*    !*background-color: black;*!*/
+/*    background-size: 50% 50%;*/
+/*}*/
