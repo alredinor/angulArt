@@ -10,7 +10,7 @@ import {Client} from '../app/model/client';
 })
 export class CompteService {
 
-  private url: string = 'http://localhost:8080/art/rest/compte';
+  private url = 'http://localhost:8080/art/rest/compte';
   private headers: HttpHeaders;
   private options: object;
 
@@ -29,7 +29,6 @@ export class CompteService {
   }*/
 
   public findAll(): Observable<any> {
-    //this.authentication();
     return this.http.get( this.url, this.options);
   }
 
@@ -38,10 +37,22 @@ export class CompteService {
     return this.http.delete(`${this.url}/${id}`, this.options);
   }
 
+  public insert(compte: Compte): Observable<any> {
+    const o: object = {
+      id: compte.idCompte,
+      login: compte.login,
+      mdp: compte.mdp,
+      email: compte.email,
+      adresse: compte.adresse,
+      enable: compte.enable,
+      role: compte.roles
+    };
+    return this.http.post(this.url, o, this.options);
+  }
+
   public insertArtisan(artisan: Artisan): Observable<any> {
     // this.authentication();
     const o: object = {
-      id: artisan.idCompte,
       login: artisan.login,
       mdp: artisan.mdp,
       email: artisan.email,
@@ -55,7 +66,6 @@ export class CompteService {
   public insertClient(client: Client): Observable<any> {
     // this.authentication();
     const o: object = {
-      id: client.idCompte,
       login: client.login,
       mdp: client.mdp,
       email: client.email,

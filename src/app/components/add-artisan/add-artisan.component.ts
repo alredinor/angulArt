@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {Artisan} from '../../model/artisan';
+import {Router} from '@angular/router';
+import {CompteService} from '../../../services/compte.service';
 
 @Component({
   selector: 'app-add-artisan',
@@ -7,9 +10,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddArtisanComponent implements OnInit {
 
-  constructor() { }
+  private artisan: Artisan = new Artisan();
+
+  constructor(private router: Router, private compteService: CompteService) { }
 
   ngOnInit() {
+  }
+
+  public saveArtisan() {
+    this.compteService.insertArtisan(this.artisan).subscribe(result => {
+      this.router.navigate(['/compte']);
+    });
   }
 
 }
