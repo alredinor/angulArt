@@ -11,10 +11,10 @@ import {AddMetierComponent} from './components/add-metier/add-metier.component';
 import {AddServiceJavaComponent} from './components/add-service-java/add-service-java.component';
 import {AddCompteComponent} from './components/add-compte/add-compte.component';
 import {EditServiceJavaComponent} from './components/edit-service-java/edit-service-java.component';
-import {EditDemandeComponent} from './components/edit-demande/edit-demande.component';
 import {AddArtisanComponent} from './components/add-artisan/add-artisan.component';
 import {AddClientComponent} from './components/add-client/add-client.component';
 import {HomeComponent} from './components/home/home.component';
+import {EditDemandeComponent} from './components/edit-demande/edit-demande.component';
 
 export const routes: Route[] = [
     {path: 'admin', component: AdminComponent},
