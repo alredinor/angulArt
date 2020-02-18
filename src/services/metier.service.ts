@@ -27,17 +27,14 @@ export class MetierService {
   }*/
 
   public findAll(): Observable<any> {
-    //this.authentication();
     return this.http.get( this.url, this.options);
   }
 
   public delete(id: number): Observable<any> {
-   // this.authentication();
     return this.http.delete(`${this.url}/${id}`, this.options);
   }
 
   public insert(metier: Metier): Observable<any> {
-   // this.authentication();
     const o: object = {
       id: metier.idMetier,
       nom: metier.titreMetier

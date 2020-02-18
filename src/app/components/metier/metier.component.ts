@@ -11,7 +11,9 @@ export class MetierComponent implements OnInit {
 
   metiers: Metier[] = [];
 
-  constructor(private metierService: MetierService) { }
+  constructor(private metierService: MetierService) {
+
+  }
 
   ngOnInit() {
     this.list();
