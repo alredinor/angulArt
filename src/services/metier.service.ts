@@ -42,7 +42,7 @@ export class MetierService {
       id: metier.idMetier,
       nom: metier.titreMetier
     };
-    return this.http.post(this.url, o, this.options);
+    return this.http.post(this.url + '/addMetier', o, this.options);
   }
 
 }

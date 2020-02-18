@@ -7,7 +7,7 @@ import {Observable} from 'rxjs';
   providedIn: 'root'
 })
 export class DemandeService {
-
+  _demandes: Demande[] = [new Demande()];
   private url = 'http://localhost:8080/art/rest/demande'
   private headers: HttpHeaders;
   private options: object;
@@ -15,7 +15,9 @@ export class DemandeService {
   // private demandes: Demande[] = [new Demande('500', 'test',
   //     200, 100, '','','','')]
 
-
+get demandes(): Demande[] {
+  return this._demandes;
+}
   constructor(private http: HttpClient) {
   }
 // private authentification(){
@@ -45,7 +47,26 @@ public delete(id: number): Observable<any>{
       message: demande.message
 
     };
-    return this.http.post(this.url, o, this.options);
+    return this.http.post(this.url + '/addDemande', o, this.options);
   }
+
+  public edit(demande: Demande, id: number): Observable<any> {
+    // this.authentification()
+    const  o: object = {
+      id: demande.idDemande,
+      idClient: demande.client,
+      idArtisan: demande.artisan,
+      date: demande.date,
+      statut: demande.statut,
+      metier: demande.metier,
+      service: demande.service,
+      message: demande.message
+
+    };
+    console.log(demande.idDemande);
+    return this.http.put(this.url + '/' + id, o, this.options);
+
+  }
+
 }
 
