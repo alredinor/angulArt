@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  private user: User = new User();
+  /*private user: User = new User();
 
   private error = false;
 
@@ -22,6 +22,6 @@ export class LoginComponent implements OnInit {
     }, error => {
       this.error = true;
     });
-  }
+  }*/
 
 }
