@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Observable} from 'rxjs';
-import {Demande} from '../app/model/demande';
 import {Offre} from '../app/model/offre';
 
 
@@ -33,10 +32,16 @@ export class OffreService {
   public insert(offre: Offre): Observable<any> {
     this.authentification()
     const  o: object = {
-      service: offre.service,
-      metier: offre.metier,
-      artisan: offre.artisan
+      service: {
+        idService: offre.service
+      },
+      metier: {
+        idMetier: offre.metier
+      } ,
+      artisan: {
+        idCompte: offre.artisan
+      }
     };
-    return this.http.post(this.url + '/add', o, this.options);
+    return this.http.post(this.url + '/addOffre', o, this.options);
   }
 }
