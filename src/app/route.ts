@@ -17,6 +17,7 @@ import {HomeComponent} from './components/home/home.component';
 import {EditDemandeComponent} from './components/edit-demande/edit-demande.component';
 import {OffreComponent} from './components/offre/offre.component';
 import {LoginComponent} from './components/login/login.component';
+import {AddOffreComponent} from './components/add-offre/add-offre.component';
 
 export const routes: Route[] = [
     {path: 'admin', component: AdminComponent},
