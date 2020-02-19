@@ -1,1 +1,11 @@
-<p>add-offre works!</p>
+<div>
+    <h2>creation d'une offre</h2>
+    <div class="form-group">
+        Id de l'offre:<input class="form-control" [(ngModel)]="offre.idOffre">
+    </div>
+
+    <div class="form-group">
+        <button class ="btn btn-outline-primary" (click)="save()" routerLinkActive="active">enregistrer</button>
+    </div>
+    <button [routerLink]="['/offre']" class ="btn btn-outline-warning" routerLinkActive="active">annuler</button>
+</div>
