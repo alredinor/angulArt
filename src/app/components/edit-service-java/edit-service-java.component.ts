@@ -33,7 +33,7 @@ export class EditServiceJavaComponent implements OnInit {
     if (this.create) {
       this.serviceJavaService.ajoutServiceJava(this.service);
     }
-    this.router.navigate(['/editServiceJava']);
+    this.router.navigate(['/service']);
   }
 
   public cancel() {
@@ -41,6 +41,6 @@ export class EditServiceJavaComponent implements OnInit {
       // this.clientService.clients[this.index] = this.clientOld;
       // this.serviceJavaService.services[this.index] = this.serviceOld ;
     }
-    this.router.navigate(['/editServiceJava']);
+    this.router.navigate(['/service']);
   }
 }
