@@ -38,12 +38,10 @@ export class DemandeService {
     this.authentification()
     const  o: object = {
       id: demande.idDemande,
-      client: demande.client,
-      artisan: demande.artisan,
+      client: {idCompte: demande.client},
+      offre: {idOffre: demande.offre},
       date: demande.date,
       statut: demande.statut,
-      metier: demande.metier,
-      service: demande.service,
       message: demande.message
 
     };
@@ -54,17 +52,15 @@ export class DemandeService {
     this.authentification()
     const  o: object = {
       id: demande.idDemande,
-      client: demande.client,
-      artisan: demande.artisan,
+      client: {idCompte: demande.client},
+      offre: {idOffre: demande.offre},
       date: demande.date,
       statut: demande.statut,
-      metier: demande.metier,
-      service: demande.service,
       message: demande.message
 
     };
     console.log(demande.idDemande);
-    return this.http.put(this.url + '/' + id, o, this.options);
+    return this.http.put(this.url + '/' +  id, o, this.options);
 
   }
 
