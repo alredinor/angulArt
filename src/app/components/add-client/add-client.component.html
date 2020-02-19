@@ -1,14 +1,14 @@
-<div>
-    <h2>creation d'un compte(client)</h2>
+<div class="container" id="addClient">
+    <h2>Creation d'un compte client</h2>
 
     <div class="form-group">
         Login:<input class="form-control" [(ngModel)]="client.login">
     </div>
     <div class="form-group">
-        Password:<input class="form-control" [(ngModel)]="client.mdp">
+        Password:<input type="password" class="form-control" [(ngModel)]="client.mdp">
     </div>
     <div class="form-group">
-        Email:<input class="form-control" [(ngModel)]="client.email">
+        Email:<input type="email" class="form-control" [(ngModel)]="client.email">
     </div>
     <div class="form-group">
         Adresse:<input class="form-control" [(ngModel)]="client.adresse">
@@ -19,6 +19,7 @@
 
     <div class="form-group">
         <button class ="btn btn-outline-primary" (click)="saveClient()" routerLinkActive="active"> enregistrer</button>
+        <button [routerLink]="['/compte']" class ="btn btn-outline-warning" routerLinkActive="active">annuler</button>
     </div>
-    <button [routerLink]="['/compte']" class ="btn btn-outline-warning" routerLinkActive="active">annuler</button>
+
 </div>
