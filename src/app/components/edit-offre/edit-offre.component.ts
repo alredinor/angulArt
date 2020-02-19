@@ -27,8 +27,7 @@ export class EditOffreComponent implements OnInit {
   }
 
   public save() {
-
-this.offreService.edit(this.offre, this.offre.idOffre).subscribe(resutlt => {
+      this.offreService.edit(this.offre, this.offre.idOffre).subscribe(resutlt => {
       this.router.navigate(['/offre']);
     });
   }
