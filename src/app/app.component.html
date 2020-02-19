@@ -1,4 +1,4 @@
-<header class="navbar navbar-dark bg-dark">
+<header class="navbar navbar-dark bg-dark col-lg-12 col-sm-12 col-xs-12">
 <!--    bg-dark-->
     <div id="logo" class="row">
         <a class="navbar-brand" [routerLink]="['/home']" routerLinkActive="active">
@@ -7,7 +7,7 @@
     </div>
     <div id="banniere" class="row">
         <form class="form-inline my-2 my-lg-0">
-            <span *ngIf="token">Bonjour {{token}}</span>
+            <span *ngIf="token" id="user">Bonjour {{token}}</span>
             <input class="form-control mr-sm-2" type="search" placeholder="recherche" aria-label="Search">
             <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Rechercher</button>
             <ng-container *ngIf="!token">
@@ -16,7 +16,7 @@
         </form>
     </div>
 </header>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light bg-light col-lg-12 col-sm-12 col-xs-12">
 <!--    light-->
     <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
@@ -35,27 +35,24 @@
 <router-outlet></router-outlet>
 
 <!-- Partie footer-->
-<div class="container-fluid fixed-bottom navbar-expand-sm navbar-dark bg-dark" id="footer">
-    <div class="container">
-        <div class="row">
-            <div class="collapse navbar-collapse col-2 col-xs-12 col-sm-4">
-                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                    <li class="nav-item"><a [routerLink]="['/home']" routerLinkActive="active">Accueil</a></li>
-                    <li class="nav-item"><a href="#">Créer un compte</a></li>
-                </ul>
-            </div>
-            <div class="col-8 col-xs-12 col-sm-4">vide</div>
-            <div class="col-2 col-xs-12 col-sm-4">
-                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                    <li class="nav-item"><a href="#">Facebook</a></li>
-                    <li class="nav-item"><a href="#">Linkedin</a></li>
-                    <li class="nav-item"><a href="#">Twitter</a></li>
-                </ul>
-            </div>
-        </div>
+<!--class="row container fixed-bottom navbar-dark bg-dark col-lg-12 col-sm-4 col-xs-12"-->
+<footer class="navbar-dark bg-dark col-lg-12 col-sm-12 col-xs-12">
+    <div class="col-1"></div>
+    <div class="col-10" id="copyright">
+        <span>© 2019-2020 AJC Ingenierie - SOPRA - Team Artinuaire</span>
     </div>
-</div>
+    <div class="col-1">
+    </div>
+</footer>
 
+
+
+
+<!--<div class="container-fluid fixed-bottom navbar-expand-sm navbar-dark bg-dark" id="footer">-->
+<!--    <div class="col-10 col-xs-12 col-sm-4" id="footer">-->
+<!--        <span id="copyright">© 2019-2020 AJC Ingenierie - SOPRA - Team Artinuaire</span>-->
+<!--    </div>-->
+<!--</div>-->
 
 <!--<div id="logo">-->
 <!--    <a class="navbar-brand" [routerLink]="['/home']" routerLinkActive="active">-->

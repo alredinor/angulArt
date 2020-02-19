@@ -2,11 +2,12 @@ import {Compte} from './compte';
 import {Metier} from './metier';
 import {StatutDemande} from '../statut-demande.enum';
 import {ServiceJava} from './service-java';
+import {Offre} from './offre';
 
 
 export class Demande {
-    constructor(private _idDemande?: number, private _message?: string, private _artisan?: Compte, private _client?: Compte,
-                private _service?: ServiceJava, private _metier?: Metier, private _statut?: StatutDemande, private _date?: Date)
+    constructor(private _idDemande?: number, private _message?: string, private _client?: Compte,
+                private _statut?: StatutDemande, private _date?: Date, private _offre?: Offre)
     {
     }
 
@@ -26,13 +27,7 @@ export class Demande {
         this._message = value;
     }
 
-    get artisan(): Compte {
-        return this._artisan;
-    }
 
-    set artisan(value: Compte) {
-        this._artisan = value;
-    }
 
     get client(): Compte {
         return this._client;
@@ -42,22 +37,6 @@ export class Demande {
         this._client = value;
     }
 
-
-    get service(): ServiceJava {
-        return this._service;
-    }
-
-    set service(value: ServiceJava) {
-        this._service = value;
-    }
-
-    get metier(): Metier {
-        return this._metier;
-    }
-
-    set metier(value: Metier) {
-        this._metier = value;
-    }
 
     get statut(): StatutDemande {
         return this._statut;
@@ -76,5 +55,11 @@ export class Demande {
     }
 
 
+    get offre(): Offre {
+        return this._offre;
+    }
 
+    set offre(value: Offre) {
+        this._offre = value;
+    }
 }
