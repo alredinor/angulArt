@@ -38,12 +38,12 @@ export class DemandeService {
     this.authentification()
     const  o: object = {
       id: demande.idDemande,
-      client: demande.client,
-      artisan: demande.artisan,
+      client: demande.client.idCompte,
+      artisan: demande.artisan.idCompte,
       date: demande.date,
       statut: demande.statut,
-      metier: demande.metier,
-      service: demande.service,
+      metier: demande.metier.idMetier,
+      service: demande.service.idService,
       message: demande.message
 
     };
@@ -53,13 +53,13 @@ export class DemandeService {
   public edit(demande: Demande, id: number): Observable<any> {
     this.authentification()
     const  o: object = {
-      idDemande: demande.idDemande,
-      client: demande.client,
-      artisan: demande.artisan,
+      id: demande.idDemande,
+      client: demande.client.idCompte,
+      artisan: demande.artisan.idCompte,
       date: demande.date,
       statut: demande.statut,
-      metier: demande.metier,
-      service: demande.service,
+      metier: demande.metier.idMetier,
+      service: demande.service.idService,
       message: demande.message
 
     };
