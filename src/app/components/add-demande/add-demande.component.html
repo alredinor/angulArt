@@ -1,11 +1,11 @@
-<div class="container">
-    <h2>creation d'une demande</h2>
+<div class="container" id="add">
+    <h2>Creation d'une demande</h2>
 
     <div class="form-group">
-        id du Client:<input class="form-control" [(ngModel)]="demande.client">
+        ID du Client:<input class="form-control" [(ngModel)]="demande.client">
     </div>
     <div class="form-group">
-        id du offre:<input class="form-control" [(ngModel)]="demande.offre">
+        ID du offre:<input class="form-control" [(ngModel)]="demande.offre">
     </div>
 <!--    <div class="form-group">-->
 <!--        id de l'Artisan:<input class="form-control" [(ngModel)]="demande.artisan">-->
@@ -17,16 +17,16 @@
 <!--        le métier:<input class="form-control" [(ngModel)]="demande.metier">-->
 <!--    </div>-->
     <div class="form-group">
-        petit message:<input class="form-control" [(ngModel)]="demande.message">
+        Votre demande :<textarea [(ngModel)]="demande.message" class="form-control" rows=5 cols=25 placeholder="Votre demande"></textarea>
     </div>
     <div class="form-group">
-        Date de la demande:<input class="form-control" [(ngModel)]="demande.date">
+        Date de la demande:<input type="date" class="form-control" [(ngModel)]="demande.date">
     </div>
 <!--    <div class="form-group">-->
 <!--        statut:<select class="form-control" [(ngModel)]="demande.statut"></select>-->
 <!--    </div>-->
     <div class="form-group">
-        <button class ="btn btn-outline-primary" (click)="save()" routerLinkActive="active"> enregistrer</button>
-        <button [routerLink]="['/demande']" class ="btn btn-outline-warning" routerLinkActive="active">annuler</button>
+        <button class ="btn btn-outline-primary" (click)="save()" routerLinkActive="active"> Enregistrer</button>
+        <button [routerLink]="['/demande']" class ="btn btn-outline-warning" routerLinkActive="active">Annuler</button>
     </div>
 </div>
