@@ -12,6 +12,7 @@ export class EditCompteComponent implements OnInit {
 
   private compte: Compte;
   constructor(private router: Router, private activatedRoute: ActivatedRoute, private compteService: CompteService) {
+    //sessionStorage.getItem(this.compte.login);
   }
 
   public save() {
