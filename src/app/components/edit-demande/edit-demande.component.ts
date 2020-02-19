@@ -13,21 +13,20 @@ import {EnumValue} from '@angular/compiler-cli/src/ngtsc/partial_evaluator';
 export class EditDemandeComponent implements OnInit {
 
   private demande: Demande = new Demande();
-  private create = true;
   private demandeOld: Demande = null;
   private index: number;
 
 
   constructor(private router: Router, private activatedRoute: ActivatedRoute, private demandeService: DemandeService) {
-    // this.activatedRoute.params.subscribe(params => {
-    //   if (params.index) {
-    //     this.index = params.index;
-    //     this.create = false;
-    //     this.demande = this.demandeService.demandes[params.index];
-    //     this.demandeOld = new Demande (this.demande.idDemande, this.demande.message, this.demande.artisan, this.demande.client,
-    //         this.demande.service, this.demande.metier, this.demande.statut, this.demande.date);
-    //   }
-    // });
+
+    this.activatedRoute.params.subscribe(params => {
+      if (params.index) {
+        this.index = params.index;
+        this.demande = this.demandeService.findById[params.index];
+        this.demandeOld = new Demande (this.demande.idDemande, this.demande.message,
+            this.demande.client, this.demande.statut, this.demande.date, this.demande.offre);
+      }
+    });
   }
   public save() {
 
