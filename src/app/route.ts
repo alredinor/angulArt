@@ -18,6 +18,8 @@ import {EditDemandeComponent} from './components/edit-demande/edit-demande.compo
 import {OffreComponent} from './components/offre/offre.component';
 import {LoginComponent} from './components/login/login.component';
 import {AddOffreComponent} from './components/add-offre/add-offre.component';
+import {EditCompteComponent} from './components/edit-compte/edit-compte.component';
+import {EditOffreComponent} from './components/edit-offre/edit-offre.component';
 
 export const routes: Route[] = [
     {path: 'admin', component: AdminComponent},
@@ -38,5 +40,7 @@ export const routes: Route[] = [
     {path: 'home', component: HomeComponent},
     {path: 'offre', component: OffreComponent},
     {path: 'login', component: LoginComponent},
-    {path: 'offre/add', component: AddOffreComponent}
+    {path: 'offre/add', component: AddOffreComponent},
+  {path: 'compte/edit', component: EditCompteComponent},
+  {path: 'offre/edit', component: EditOffreComponent}
 ]
