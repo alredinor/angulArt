@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {Compte} from '../../model/compte';
+import {CompteService} from '../../../services/compte.service';
 
 @Component({
   selector: 'app-edit-compte',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EditCompteComponent implements OnInit {
 
-  constructor() { }
+  private compte: Compte;
 
-  ngOnInit() {
+  constructor(private compteService: CompteService) {
+
   }
+
+  ngOnInit() {}
+
+
 
 }
