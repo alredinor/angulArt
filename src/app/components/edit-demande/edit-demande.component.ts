@@ -21,8 +21,8 @@ export class EditDemandeComponent implements OnInit {
 
     this.activatedRoute.params.subscribe(params => {
       if (params.index) {
-        this.index = params.index;
-        this.demande = this.demandeService.findById[params.index];
+        this.demande.idDemande = params.index;
+        this.demande = this.demandeService.findAll()[params.index];
         this.demandeOld = new Demande (this.demande.idDemande, this.demande.message,
             this.demande.client, this.demande.statut, this.demande.date, this.demande.offre);
       }
