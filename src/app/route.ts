@@ -30,7 +30,7 @@ export const routes: Route[] = [
     {path: 'demande', component: DemandeComponent},
     {path: 'metier', component: MetierComponent},
     {path: 'service', component: ServiceJavaComponent},
-    {path: 'editServiceJava', component: EditServiceJavaComponent},
+    {path: 'service/edit/:idService', component: EditServiceJavaComponent},
     {path: 'service/add', component: AddServiceJavaComponent},
     {path: 'demande/add', component: AddDemandeComponent},
     {path: 'metier/add', component: AddMetierComponent},
