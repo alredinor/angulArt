@@ -31,7 +31,6 @@ export class DemandeService {
     return this.http.get(this.url, this.options);
   }
   public  findById(id: number): Observable<any> {
-
     return this.http.get(this.url + '/' + id, this.options);
   }
 
