@@ -18,14 +18,9 @@ import {EditDemandeComponent} from './components/edit-demande/edit-demande.compo
 import {OffreComponent} from './components/offre/offre.component';
 import {LoginComponent} from './components/login/login.component';
 import {AddOffreComponent} from './components/add-offre/add-offre.component';
-<<<<<<< HEAD
 import {ErreurAuthentificationComponent} from './components/erreur-authentification/erreur-authentification.component';
 import { EditCompteComponent } from './components/edit-compte/edit-compte.component';
 import { EditOffreComponent } from './components/edit-offre/edit-offre.component';
-=======
-import {EditCompteComponent} from './components/edit-compte/edit-compte.component';
-import {EditOffreComponent} from './components/edit-offre/edit-offre.component';
->>>>>>> f55af228214eef45698a8fc78c2700eeb1273140
 
 export const routes: Route[] = [
     {path: 'admin', component: AdminComponent},
