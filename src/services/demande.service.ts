@@ -53,7 +53,7 @@ export class DemandeService {
   public edit(demande: Demande, id: number): Observable<any> {
     this.authentification()
     const  o: object = {
-      idDemande: demande.idDemande,
+      id: demande.idDemande,
       client: demande.client,
       artisan: demande.artisan,
       date: demande.date,

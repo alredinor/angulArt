@@ -25,6 +25,7 @@ import { AddClientComponent } from './components/add-client/add-client.component
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { OffreComponent } from './components/offre/offre.component';
+import { AddOffreComponent } from './components/add-offre/add-offre.component';
 
 
 
@@ -52,6 +53,7 @@ import { OffreComponent } from './components/offre/offre.component';
     HomeComponent,
     LoginComponent,
     OffreComponent,
+    AddOffreComponent,
 
 
   ],
