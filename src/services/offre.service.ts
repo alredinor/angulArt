@@ -3,6 +3,7 @@ import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {Offre} from '../app/model/offre';
 import {ActivatedRoute} from '@angular/router';
+import {Demande} from '../app/model/demande';
 
 
 @Injectable({
@@ -52,4 +53,23 @@ export class OffreService {
     };
     return this.http.post(this.url + '/addOffre', o, this.options);
   }
+
+  public edit(offre: Offre, id: number): Observable<any> {
+    this.authentification()
+    const  o: object = {
+      service: {
+        idService: offre.service
+      },
+      metier: {
+        idMetier: offre.metier
+      } ,
+      artisan: {
+        idCompte: offre.artisan
+      }
+    };
+    console.log(offre.idOffre);
+    return this.http.put(this.url + '/' + id, o, this.options);
+
+  }
+
 }
