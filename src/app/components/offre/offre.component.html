@@ -10,9 +10,9 @@
         <th>Metier:</th>
         <tr *ngFor="let o of offres">
             <td>{{o.idOffre}}</td>
-            <td>{{o.artisan}}</td>
-            <td>{{o.service}}</td>
-            <td>{{o.metier}}</td>
+            <td>{{o.artisan.email}}</td>
+            <td>{{o.service.nomService}}</td>
+            <td>{{o.metier.titreMetier}}</td>
             <td class="btn-outline-danger" (click)="delete(o.idOffre)">supprimer</td>
         </tr>
     </table>
