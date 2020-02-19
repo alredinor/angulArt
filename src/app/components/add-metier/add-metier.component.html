@@ -1,11 +1,12 @@
-<div>
-    <h2>creation d'un metier</h2>
+<div class="container" id="addMetier">
+    <h2>Creation d'un metier</h2>
     <div class="form-group">
         Titre du metier:<input class="form-control" [(ngModel)]="metier.titreMetier">
     </div>
 
     <div class="form-group">
-        <button class ="btn btn-outline-primary" (click)="save()" routerLinkActive="active"> enregistrer</button>
+        <button class ="btn btn-outline-primary" (click)="save()" routerLinkActive="active"> Enregistrer</button>
+        <button [routerLink]="['/metier']" class ="btn btn-outline-warning" routerLinkActive="active">Annuler</button>
     </div>
-    <button [routerLink]="['/metier']" class ="btn btn-outline-warning" routerLinkActive="active">annuler</button>
+
 </div>
