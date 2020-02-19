@@ -35,7 +35,7 @@ export const routes: Route[] = [
     {path: 'demande/add', component: AddDemandeComponent},
     {path: 'metier/add', component: AddMetierComponent},
     {path: 'compte/add', component: AddCompteComponent},
-    {path: 'demande/edit', component: EditDemandeComponent},
+    {path: 'demande/edit/:idDemande', component: EditDemandeComponent},
     {path: 'compte/addArtisan', component: AddArtisanComponent},
     {path: 'compte/addClient', component: AddClientComponent},
     {path: 'home', component: HomeComponent},
@@ -43,6 +43,6 @@ export const routes: Route[] = [
     {path: 'login', component: LoginComponent},
     {path: 'offre/add', component: AddOffreComponent},
     {path: 'error/login', component: ErreurAuthentificationComponent},
-  {path: 'compte/edit', component: EditCompteComponent},
-  {path: 'offre/edit', component: EditOffreComponent}
+    {path: 'compte/edit', component: EditCompteComponent},
+    {path: 'offre/edit/:idOffre', component: EditOffreComponent}
 ]
