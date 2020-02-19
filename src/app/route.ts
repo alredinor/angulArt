@@ -16,6 +16,7 @@ import {AddClientComponent} from './components/add-client/add-client.component';
 import {HomeComponent} from './components/home/home.component';
 import {EditDemandeComponent} from './components/edit-demande/edit-demande.component';
 import {OffreComponent} from './components/offre/offre.component';
+import {LoginComponent} from './components/login/login.component';
 
 export const routes: Route[] = [
     {path: 'admin', component: AdminComponent},
@@ -34,5 +35,7 @@ export const routes: Route[] = [
     {path: 'compte/addArtisan', component: AddArtisanComponent},
     {path: 'compte/addClient', component: AddClientComponent},
     {path: 'home', component: HomeComponent},
-    {path: 'offre', component: OffreComponent}
+    {path: 'offre', component: OffreComponent},
+    {path: 'login', component: LoginComponent},
+    {path: 'offre/add', component: AddOffreComponent}
 ]
