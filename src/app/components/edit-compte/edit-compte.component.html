@@ -1,1 +1,32 @@
-<p>edit-compte works!</p>
+<div class="container" style="" id="input">
+
+  <h2>modifier votre compte</h2>
+
+  <div class="form-group" >
+    login:<input class="form-control" [(ngModel)]="compte.login"  placeholder='changer votre login' required>
+  </div>
+  <div class="form-group">
+    mot de passe:<input class="form-control" [(ngModel)]="compte.mdp" placeholder='changer votre mot de passe' required>
+  </div>
+  <div class="form-group">
+   numéro :<input class="form-control" [(ngModel)]="compte.adresse.numero" placeholder='changer votre numero de rue' required>
+  </div>
+  <div class="form-group">
+    rue :<input class="form-control" [(ngModel)]="compte.adresse.rue" placeholder='changer votre rue' required>
+  </div>
+  <div class="form-group">
+    ville :<input class="form-control" [(ngModel)]="compte.adresse.ville" placeholder='changer votre ville' required>
+  </div>
+  <div class="form-group">
+    code postal :<input class="form-control" [(ngModel)]="compte.adresse.codePostal" placeholder='changer votre code postal' required>
+  </div>
+  <div class="form-group">
+    email:<input class="form-control" [(ngModel)]="compte.email" placeholder='changer votre email' required>
+  </div>
+
+  <div class="form-group">
+    <button class ="btn btn-primary" (click)="save()" routerLinkActive="active"> enregistrer</button>
+    <button [routerLink]="['/compte']" class ="btn btn-warning" routerLinkActive="active">annuler</button>
+  </div>
+
+</div>

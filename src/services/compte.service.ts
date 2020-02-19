@@ -4,6 +4,7 @@ import {Observable} from 'rxjs';
 import {Compte} from '../app/model/compte';
 import {Artisan} from '../app/model/artisan';
 import {Client} from '../app/model/client';
+import {Offre} from '../app/model/offre';
 
 @Injectable({
   providedIn: 'root'
@@ -76,6 +77,23 @@ export class CompteService {
       role: client.roles
     };
     return this.http.post(this.url + '/client', o, this.options);
+  }
+
+  public edit(compte: Compte, id: number): Observable<any> {
+    const  o: object = {
+      login: {
+        login: compte.login
+      },
+      mdp: {
+        login: compte.mdp
+      } ,
+      adresse: {
+        adresse: compte.adresse
+      }
+    };
+    console.log(compte.idCompte);
+    return this.http.put(this.url + '/' + id, o, this.options);
+
   }
 
 }
