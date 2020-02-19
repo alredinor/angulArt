@@ -13,7 +13,7 @@
             <td>{{o.artisan.email}}</td>
             <td>{{o.service.nomService}}</td>
             <td>{{o.metier.titreMetier}}</td>
-            <td><button class="=btn btn-outline-info" [routerLink]="['/offre','edit']" >editer l'offre</button></td>
+            <td><button class="=btn btn-outline-info" [routerLink]="['/offre','edit' , o.idOffre]" >editer l'offre</button></td>
             <td class="btn-outline-danger" (click)="delete(o.idOffre)">supprimer</td>
         </tr>
     </table>
