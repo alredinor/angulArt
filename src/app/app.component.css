@@ -15,3 +15,30 @@
     /*background-color: black;*/
     background-size: 50% 50%;
 }
+#copyright{
+    text-align: center !important;
+    color: beige;
+}
+#footer{
+    min-height: 100px;
+    padding: 20px 10px;
+    position: fixed;
+}
+#res>{
+    display: inline-block;
+}
+#user{
+    color: beige;
+}
+footer {
+    min-height:40px !important;
+    padding-right: 0 !important;
+    margin-top: 10%;
+    color: black !important;
+    text-align: center !important;
+    position: fixed !important;
+    bottom: 0 !important;
+    left:0 !important;
+    right:0 !important;
+}
+
