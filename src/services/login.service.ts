@@ -8,7 +8,7 @@ import {Observable} from 'rxjs';
 })
 export class LoginService {
 
-  private url = 'http://localhost:8080/art/';
+  private url = 'http://localhost:8080/art/rest/login';
 
   constructor(private  http: HttpClient, private loginService: LoginService) { }
 

@@ -1,4 +1,5 @@
 <header class="navbar navbar-dark bg-dark">
+<!--    bg-dark-->
     <div id="logo" class="row">
         <a class="navbar-brand" [routerLink]="['/home']" routerLinkActive="active">
             <img src="assets/images/home/logo.png" alt="logo">
@@ -7,12 +8,13 @@
     <div id="banniere" class="row">
         <form class="form-inline my-2 my-lg-0">
             <input class="form-control mr-sm-2" type="search" placeholder="recherche" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Rechercher</button>
+            <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Rechercher</button>
+            <button class="btn btn-outline-success my-2 my-sm-0" [routerLink]="['/login']" routerLinkActive="active">Se connecter</button>
         </form>
-        <li class="nav-item"><a [routerLink]="['/login']" routerLinkActive="active" class="btn btn-link">se connecter</a></li>
     </div>
 </header>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
+<!--    light-->
     <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
             <li class="nav-item"><a [routerLink]="['/compte']" routerLinkActive="active" class="btn btn-link">Compte</a></li>
