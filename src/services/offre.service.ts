@@ -70,7 +70,7 @@ export class OffreService {
         idCompte: offre.artisan
       }
     };
-    return this.http.put(this.url + '/' + id , o, this.options);
+    return this.http.put(this.url + '/' + id, o, this.options);
 
   }
 
