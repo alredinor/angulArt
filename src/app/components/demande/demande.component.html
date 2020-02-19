@@ -18,10 +18,10 @@
             <tr *ngFor="let d of demandes">
                 <td>{{d.idDemande}}</td>
                 <td>{{d.message}}</td>
-                <td>{{d.artisan.idCompte}}</td>
-                <td>{{d.client.idCompte}}</td>
-                <td>{{d.service.idService}}</td>
-                <td>{{d.metier.idMetier}}</td>
+                <td>{{d.artisan}}</td>
+                <td>{{d.client}}</td>
+                <td>{{d.service}}</td>
+                <td>{{d.metier}}</td>
                 <td>{{d.statut}}</td>
                 <td>{{d.date}}</td>
                 <td><button class="=btn btn-outline-info" [routerLink]="['/demande','edit']" >editer la demande</button></td>
