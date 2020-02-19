@@ -8,6 +8,7 @@ import {Observable} from 'rxjs';
 })
 export class DemandeService {
   _demandes: Demande[] = [new Demande()];
+  demande: Demande = new Demande();
   private url = 'http://localhost:8080/art/rest/demande'
   private headers: HttpHeaders;
   private options: object;
@@ -29,6 +30,10 @@ export class DemandeService {
     this.authentification()
     return this.http.get(this.url, this.options);
   }
+  public  findById(id: number): Observable<any> {
+
+    return this.http.get(this.url + '/' + id, this.options);
+  }
 
   public delete(id: number): Observable<any>{
 
@@ -37,7 +42,6 @@ export class DemandeService {
   public insert(demande: Demande): Observable<any> {
     this.authentification()
     const  o: object = {
-      id: demande.idDemande,
       client: {idCompte: demande.client},
       offre: {idOffre: demande.offre},
       date: demande.date,
@@ -49,9 +53,8 @@ export class DemandeService {
   }
 
   public edit(demande: Demande, id: number): Observable<any> {
-    this.authentification()
+    this.findById(demande.idDemande);
     const  o: object = {
-      id: demande.idDemande,
       client: {idCompte: demande.client},
       offre: {idOffre: demande.offre},
       date: demande.date,
