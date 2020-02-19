@@ -15,6 +15,8 @@ export class OffreService {
   private headers: HttpHeaders;
   private options: object;
 
+
+
   //private idCompte: string;
 
   constructor(private http: HttpClient, private route: ActivatedRoute) {
@@ -34,7 +36,7 @@ export class OffreService {
     return this.http.get(this.url, this.options);
   }
 
-  public delete(id: number): Observable<any>{
+  public delete(id: number): Observable<any> {
 
     return this.http.delete(this.url + '/' + id, this.options) ;
   }
@@ -55,6 +57,7 @@ export class OffreService {
   }
 
   public edit(offre: Offre, id: number): Observable<any> {
+
     this.authentification()
     const  o: object = {
       service: {
@@ -67,8 +70,7 @@ export class OffreService {
         idCompte: offre.artisan
       }
     };
-    console.log(offre.idOffre);
-    return this.http.put(this.url + '/' + id, o, this.options);
+    return this.http.put(this.url + '/' + id , o, this.options);
 
   }
 

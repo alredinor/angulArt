@@ -13,14 +13,22 @@ import {OffreService} from '../../../services/offre.service';
 export class EditOffreComponent implements OnInit {
 
   private offre: Offre = new Offre();
+  private index: number;
+  private  offreOld: Offre = null;
 
   constructor(private router: Router, private activatedRoute: ActivatedRoute, private offreService: OffreService) {
-
+    this.activatedRoute.params.subscribe(params => {
+      if (params.index) {
+        this.offre.idOffre = params.index;
+        this.offre = this.offreService.findAll()[params.index];
+        this.offreOld = new Offre(this.offre.idOffre, this.offre.service, this.offre.metier, this.offre.artisan);
+      }
+    });
   }
 
   public save() {
 
-    this.offreService.edit(this.offre, this.offre.idOffre).subscribe(resutlt => {
+this.offreService.edit(this.offre, this.offre.idOffre).subscribe(resutlt => {
       this.router.navigate(['/offre']);
     });
   }
