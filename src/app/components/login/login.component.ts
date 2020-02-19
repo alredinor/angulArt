@@ -12,7 +12,7 @@ export class LoginComponent implements OnInit {
 
   private compte: Compte = new Compte();
 
-  private error = false;
+  private erreur = false;
 
   constructor(private loginService: LoginService, private router: Router) { }
 
@@ -20,15 +20,21 @@ export class LoginComponent implements OnInit {
   }
   public send() {
     this.loginService.login(this.compte).subscribe(result => {
-      sessionStorage.setItem('user', `${this.compte.login}:${this.compte.mdp}`);
+      sessionStorage.setItem('compte', btoa(`${this.compte.login}:${this.compte.mdp}`));
+      // sessionStorage.setItem('token', this.user.login);
+      sessionStorage.setItem('token', this.compte.login);
       this.router.navigate(['/home']);
     }, error => {
-      this.error = true;
+      this.erreur = true;
     });
   }
 
-  login() {
-    console.log('Tentative de connexion');
+  public annuler() {
+    this.router.navigate(['login']);
   }
+
+  // login() {
+  //   console.log('Tentative de connexion');
+  // }
 
 }
