@@ -23,10 +23,10 @@ export class MetierComponent implements OnInit {
     });
   }
 
-  public delete(id: number) {
-    this.metierService.delete(id).subscribe( result => {
-      this.list();
-    });
-  }
+    public delete(id: number) {
+      this.metierService.delete(id).subscribe( result => {
+        this.list();
+      });
+    }
 
 }

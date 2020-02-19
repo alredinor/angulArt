@@ -3,6 +3,7 @@ import {Metier} from './metier';
 import {StatutDemande} from '../statut-demande.enum';
 import {ServiceJava} from './service-java';
 
+
 export class Demande {
     constructor(private _idDemande?: number, private _message?: string, private _artisan?: Compte, private _client?: Compte,
                 private _service?: ServiceJava, private _metier?: Metier, private _statut?: StatutDemande, private _date?: Date)

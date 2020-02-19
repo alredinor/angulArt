@@ -38,8 +38,8 @@ export class DemandeService {
     this.authentification()
     const  o: object = {
       id: demande.idDemande,
-      idClient: demande.client,
-      idArtisan: demande.artisan,
+      client: demande.client,
+      artisan: demande.artisan,
       date: demande.date,
       statut: demande.statut,
       metier: demande.metier,
@@ -53,9 +53,9 @@ export class DemandeService {
   public edit(demande: Demande, id: number): Observable<any> {
     this.authentification()
     const  o: object = {
-      id: demande.idDemande,
-      idClient: demande.client,
-      idArtisan: demande.artisan,
+      idDemande: demande.idDemande,
+      client: demande.client,
+      artisan: demande.artisan,
       date: demande.date,
       statut: demande.statut,
       metier: demande.metier,
