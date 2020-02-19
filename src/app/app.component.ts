@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angulArt';
+  private compte = sessionStorage.getItem('compte');
+
+  get token() {
+    return sessionStorage.getItem('token');
+  }
 }

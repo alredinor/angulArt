@@ -18,7 +18,9 @@ export class LoginService {
         'Content-type': 'application/json',
         Authorization: 'Basic ' + btoa(`${compte.login}:${compte.mdp}`)
       });
-    const options: object = {headers: headers};
+    const options: object = {
+      headers: headers
+    };
     return this.http.get(this.url, options);
   }
 }

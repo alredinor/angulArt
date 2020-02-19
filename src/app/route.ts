@@ -18,6 +18,7 @@ import {EditDemandeComponent} from './components/edit-demande/edit-demande.compo
 import {OffreComponent} from './components/offre/offre.component';
 import {LoginComponent} from './components/login/login.component';
 import {AddOffreComponent} from './components/add-offre/add-offre.component';
+import {ErreurAuthentificationComponent} from './components/erreur-authentification/erreur-authentification.component';
 
 export const routes: Route[] = [
     {path: 'admin', component: AdminComponent},
@@ -38,5 +39,6 @@ export const routes: Route[] = [
     {path: 'home', component: HomeComponent},
     {path: 'offre', component: OffreComponent},
     {path: 'login', component: LoginComponent},
-    {path: 'offre/add', component: AddOffreComponent}
+    {path: 'offre/add', component: AddOffreComponent},
+    {path: 'error/login', component: ErreurAuthentificationComponent}
 ]
