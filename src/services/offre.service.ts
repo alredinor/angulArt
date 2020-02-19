@@ -36,6 +36,6 @@ export class OffreService {
       metier: offre.metier,
       artisan: offre.artisan
     };
-    return this.http.post(this.url + '/addOffre', o, this.options);
+    return this.http.post(this.url + '/add', o, this.options);
   }
 }
