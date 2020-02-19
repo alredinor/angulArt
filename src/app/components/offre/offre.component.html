@@ -4,7 +4,7 @@
         <button class="btn btn-info" [routerLink]="['/offre','add']">Ajout offre</button>
     </div>
     <table class="table">
-        <th>idOffre:</th>
+        <th>ID Offre:</th>
         <th>Artisan:</th>
         <th>Service:</th>
         <th>Metier:</th>
@@ -13,8 +13,8 @@
             <td>{{o.artisan.email}}</td>
             <td>{{o.service.nomService}}</td>
             <td>{{o.metier.titreMetier}}</td>
-            <td><button class="=btn btn-outline-info" [routerLink]="['/offre','edit' , o.idOffre]" >editer l'offre</button></td>
-            <td class="btn-outline-danger" (click)="delete(o.idOffre)">supprimer</td>
+            <td><button class="=btn btn-outline-info" [routerLink]="['/offre','edit' , o.idOffre]" >Editer l'offre</button></td>
+            <td class="btn-outline-danger" (click)="delete(o.idOffre)">Supprimer</td>
         </tr>
     </table>
 

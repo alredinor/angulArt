@@ -1,4 +1,4 @@
-<div>
+<div class="container" id="addOffre">
     <h2>creation d'une offre</h2>
     <div class="form-group">
         metier:<input class="form-control" [(ngModel)]="offre.metier">
@@ -7,7 +7,7 @@
     </div>
 
     <div class="form-group">
-        <button class ="btn btn-outline-primary" (click)="save()" routerLinkActive="active">enregistrer</button>
+        <button class ="btn btn-outline-primary" (click)="save()" routerLinkActive="active">Enregistrer</button>
+        <button [routerLink]="['/offre']" class ="btn btn-outline-warning" routerLinkActive="active">Annuler</button>
     </div>
-    <button [routerLink]="['/offre']" class ="btn btn-outline-warning" routerLinkActive="active">annuler</button>
 </div>
