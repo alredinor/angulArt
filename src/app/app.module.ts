@@ -27,6 +27,7 @@ import { LoginComponent } from './components/login/login.component';
 import { OffreComponent } from './components/offre/offre.component';
 import { AddOffreComponent } from './components/add-offre/add-offre.component';
 import { LogoutComponent } from './components/logout/logout.component';
+import { ErreurAuthentificationComponent } from './components/erreur-authentification/erreur-authentification.component';
 
 
 
@@ -56,6 +57,7 @@ import { LogoutComponent } from './components/logout/logout.component';
     OffreComponent,
     AddOffreComponent,
     LogoutComponent,
+    ErreurAuthentificationComponent,
 
 
   ],
