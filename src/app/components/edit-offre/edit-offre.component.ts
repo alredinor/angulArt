@@ -22,13 +22,15 @@ export class EditOffreComponent implements OnInit {
         this.offre.idOffre = params.index;
         this.offre = this.offreService.findAll()[params.index];
         this.offreOld = new Offre(this.offre.idOffre, this.offre.service, this.offre.metier, this.offre.artisan);
+        console.log(this);
       }
     });
   }
 
   public save() {
-      this.offreService.edit(this.offre, this.offre.idOffre).subscribe(resutlt => {
-      this.router.navigate(['/offre']);
+   this.activatedRoute.paramMap.subscribe(param => {
+      this.offreService.edit(this.offre, param.params.idOffre).subscribe(resutlt => {this.router.navigate(['/offre']);
+    })
     });
   }
 
