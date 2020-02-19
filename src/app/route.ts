@@ -43,6 +43,6 @@ export const routes: Route[] = [
     {path: 'login', component: LoginComponent},
     {path: 'offre/add', component: AddOffreComponent},
     {path: 'error/login', component: ErreurAuthentificationComponent},
-    {path: 'compte/edit', component: EditCompteComponent},
+    {path: 'compte/edit/:idCompte', component: EditCompteComponent},
     {path: 'offre/edit/:idOffre', component: EditOffreComponent}
 ]
