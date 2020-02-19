@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {Offre} from '../app/model/offre';
+import {ActivatedRoute} from '@angular/router';
+import {Demande} from '../app/model/demande';
 
 
 @Injectable({
@@ -12,7 +14,14 @@ export class OffreService {
   private url = 'http://localhost:8080/art/rest/offre'
   private headers: HttpHeaders;
   private options: object;
-  constructor(private http: HttpClient) {
+
+  //private idCompte: string;
+
+  constructor(private http: HttpClient, private route: ActivatedRoute) {
+    /*this.route.queryParams.subscribe(params => {
+      this.idCompte = params['idComtpe'];
+      //l'attribut idCompte contient l'id de la session connecté
+    });*/
   }
 
   private authentification(){
@@ -44,4 +53,23 @@ export class OffreService {
     };
     return this.http.post(this.url + '/addOffre', o, this.options);
   }
+
+  public edit(offre: Offre, id: number): Observable<any> {
+    this.authentification()
+    const  o: object = {
+      service: {
+        idService: offre.service
+      },
+      metier: {
+        idMetier: offre.metier
+      } ,
+      artisan: {
+        idCompte: offre.artisan
+      }
+    };
+    console.log(offre.idOffre);
+    return this.http.put(this.url + '/' + id, o, this.options);
+
+  }
+
 }

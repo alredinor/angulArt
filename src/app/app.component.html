@@ -7,9 +7,12 @@
     </div>
     <div id="banniere" class="row">
         <form class="form-inline my-2 my-lg-0">
+            <span *ngIf="token">Bonjour {{token}}</span>
             <input class="form-control mr-sm-2" type="search" placeholder="recherche" aria-label="Search">
             <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Rechercher</button>
-            <button class="btn btn-outline-success my-2 my-sm-0" [routerLink]="['/login']" routerLinkActive="active">Se connecter</button>
+            <ng-container *ngIf="!token">
+                <button class="btn btn-outline-success my-2 my-sm-0" [routerLink]="['/login']" routerLinkActive="active">Se connecter</button>
+            </ng-container>
         </form>
     </div>
 </header>
@@ -25,6 +28,7 @@
             <li class="nav-item"><a [routerLink]="['/demande']" routerLinkActive="active" class="btn btn-link">Demande</a></li>
             <li class="nav-item"><a [routerLink]="['/offre']" routerLinkActive="active" class="btn btn-link">Offre</a></li>
         </ul>
+        <app-logout *ngIf="token"></app-logout>
     </div>
 </nav>
 
