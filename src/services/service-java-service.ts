@@ -8,7 +8,8 @@ export class ServiceJavaService {
     private url = 'http://localhost:8080/art/rest/service';
     private headers: HttpHeaders;
     private options: object;
-    private services: ServiceJava [] = [];
+    private services: ServiceJava[] = [];
+    // private services: ServiceJava[] = [ new ServiceJava('200','test','reussi')];
 
     constructor(private http: HttpClient) {
     }
