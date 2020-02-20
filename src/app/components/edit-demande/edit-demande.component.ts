@@ -14,15 +14,14 @@ export class EditDemandeComponent implements OnInit {
 
   private demande: Demande = new Demande();
   private demandeOld: Demande = null;
-  private index: number;
 
 
   constructor(private router: Router, private activatedRoute: ActivatedRoute, private demandeService: DemandeService) {
 
-    this.activatedRoute.params.subscribe(params => {
-      if (params.index) {
-        this.demande.idDemande = params.index;
-        this.demande = this.demandeService.findAll()[params.index];
+    this.activatedRoute.params.subscribe(param => {
+      if (param.idDemande) {
+        this.demande.idDemande = param.idDemande;
+        this.demande = this.demandeService.findAll()[param.idDemande];
         this.demandeOld = new Demande (this.demande.idDemande, this.demande.message,
             this.demande.client, this.demande.statut, this.demande.date, this.demande.offre);
       }
@@ -30,9 +29,13 @@ export class EditDemandeComponent implements OnInit {
   }
   public save() {
 
-      this.demandeService.edit(this.demande, this.demande.idDemande).subscribe(resutlt => {
-        this.router.navigate(['/demande']);
-      });
+    this.demandeService.edit(this.demande, this.demande.idDemande).subscribe(resutlt => {
+      this.router.navigate(['/demande']);
+    });
+    // this.activatedRoute.paramMap.subscribe(param => {
+    //   this.demandeService.edit(this.demande, param.params.idDemande).subscribe(resutlt => {this.router.navigate(['/demande']);
+    //   });
+    //  });
   }
   ngOnInit() {
   }

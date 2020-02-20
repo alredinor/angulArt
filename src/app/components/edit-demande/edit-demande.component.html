@@ -1,6 +1,12 @@
 <div class="container" id="edit">
     <h2>edition d'une demande</h2>
 
+    <div class="form-group">
+        ID du Client:<input class="form-control" [(ngModel)]="demande.client">
+    </div>
+    <div class="form-group">
+        ID du offre:<input class="form-control" [(ngModel)]="demande.offre">
+    </div>
 
     <div class="form-group">
         Votre demande :<textarea [(ngModel)]="demande.message" class="form-control" rows=5 cols=25 placeholder="Votre demande"></textarea>
