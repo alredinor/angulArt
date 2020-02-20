@@ -1,13 +1,11 @@
-<<<<<<< HEAD
 h1{
     text-align: center;
     color: green;
 }
-p{
+p {
     text-align: center;
     color: beige;
-=======
-
+}
 .outer-div
 {
   padding: 50px;
@@ -36,5 +34,4 @@ h2{
   letter-spacing: 0.1rem;
   margin-top: 50px;
   font-weight: normal;
->>>>>>> 99338743f2fa60132480dbb0641047b13073f90a
 }
