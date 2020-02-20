@@ -19,15 +19,15 @@ export class CompteService {
 
   }
 
-  /* private authentication() {
-    this.headers = new HttpHeaders({
-      'Content-type':'application/json',
-      'Authorization':'Basic '+ btoa( 'postgres:root')
-    });
-    this.options = {
-      headers: this.headers
-    }
-  }*/
+  //  private authentication() {
+  //   this.headers = new HttpHeaders({
+  //     'Content-type':'application/json',
+  //     Authorization:'Basic ' + btoa( 'postgres:root')
+  //   });
+  //   this.options = {
+  //     headers: this.headers
+  //   }
+  // }
 
   public findAll(): Observable<any> {
     return this.http.get( this.url, this.options);
