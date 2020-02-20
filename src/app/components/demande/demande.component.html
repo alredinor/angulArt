@@ -1,21 +1,25 @@
+<br>
 <div class="container">
     <div>
         <button class="btn btn-info" [routerLink]="['/demande','add']">Ajout demande</button>
     </div>
-    <table class="table">
-        <tr>
-            <th>Id demande</th>
-            <th>Message</th>
-            <th>Artisan</th>
-            <th>Client</th>
-            <th>Service</th>
-            <th>Metier</th>
-            <th>Statut</th>
-            <th>Date</th>
-            <th></th>
-            <th></th>
-        </tr>
-            <tr *ngFor="let d of demandes">
+    <br>
+    <table class="table table">
+        <thead class="thead-dark">
+            <tr>
+                <th>Id demande</th>
+                <th>Message</th>
+                <th>Artisan</th>
+                <th>Client</th>
+                <th>Service</th>
+                <th>Metier</th>
+                <th>Statut</th>
+                <th>Date</th>
+                <th colspan="2"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let d of demandes" class="bg-light">
                 <td>{{d.idDemande}}</td>
                 <td>{{d.message}}</td>
                 <td>{{d.offre.artisan.email}}</td>
@@ -27,6 +31,6 @@
                 <td><button class="=btn btn-outline-info" [routerLink]="['/demande','edit', d.idDemande]" >editer la demande</button></td>
                 <td><button class="=btn btn-outline-danger"  (click)="delete(d.idDemande)">Supprimer la demande</button></td>
             </tr>
-
+        </tbody>
     </table>
 </div>

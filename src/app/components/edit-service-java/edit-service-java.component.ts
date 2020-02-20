@@ -38,7 +38,6 @@ export class EditServiceJavaComponent implements OnInit {
 
   public cancel() {
     if (!this.create) {
-      // this.clientService.clients[this.index] = this.clientOld;
       // this.serviceJavaService.services[this.index] = this.serviceOld ;
     }
     this.router.navigate(['/service']);

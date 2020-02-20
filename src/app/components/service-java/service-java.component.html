@@ -3,20 +3,24 @@
     <div>
         <button class="=btn btn-primary" [routerLink]="['/service','add']" routerLinkActive="active">Ajouter</button>
     </div>
-    <table class="table">
-        <tr>
-            <th>ID SERVICE</th>
-            <th>NOM SERVICE</th>
-            <th>METIER</th>
-            <th></th>
-            <th></th>
-        </tr>
-        <tr *ngFor="let s of services">
-            <td>{{s.idService}}</td>
-            <td>{{s.nomService}}</td>
-            <td>{{s.metier}}</td>
-            <td><button class="=btn btn-outline-primary" [routerLink]="['/service','edit', s.idService]" >Editer</button></td>
-            <td><button class="=btn btn-outline-danger"  (click)="delete(s.idService)">Supprimer</button></td>
-        </tr>
+    <br>
+    <table class="table table">
+        <thead class="thead-dark">
+            <tr>
+                <th>ID SERVICE</th>
+                <th>NOM SERVICE</th>
+                <th>METIER</th>
+                <th colspan="2"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let s of services" class="bg-light">
+                <td>{{s.idService}}</td>
+                <td>{{s.nomService}}</td>
+                <td>{{s.metier}}</td>
+                <td><button class="=btn btn-outline-primary" [routerLink]="['/service','edit', s.idService]" >Editer</button></td>
+                <td><button class="=btn btn-outline-danger"  (click)="delete(s.idService)">Supprimer</button></td>
+            </tr>
+        </tbody>
     </table>
 </div>

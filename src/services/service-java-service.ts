@@ -8,7 +8,8 @@ export class ServiceJavaService {
     private url = 'http://localhost:8080/art/rest/service';
     private headers: HttpHeaders;
     private options: object;
-    private services: ServiceJava [] = [];
+    private services: ServiceJava[] = [];
+    // private services: ServiceJava[] = [ new ServiceJava('200','test','reussi')];
 
     constructor(private http: HttpClient) {
     }
@@ -27,12 +28,12 @@ export class ServiceJavaService {
         this.authentification();
         return  this.http.get(this.url, this.options);
     }
-
+    // delete
     public delete(idService: number): Observable<any> {
         this.authentification()
         return this.http.delete(this.url + '/' + idService, this.options);
     }
-
+    // insert
     public insert(service: ServiceJava ): Observable<any> {
         this.authentification();
         const o = {
@@ -40,7 +41,7 @@ export class ServiceJavaService {
         };
         return this.http.post(this.url, o, this.options);
     }
-
+    // push
     public ajoutServiceJava(service: ServiceJava) {
         this.services.push(service);
     }
