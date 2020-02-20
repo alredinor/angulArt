@@ -4,26 +4,32 @@
         <button class="btn btn-info" [routerLink]="['/compte','addArtisan']">Ajout Artisan</button>
         <button class="btn btn-info" [routerLink]="['/compte','addClient']">Ajout Client</button>
     </div>
-    <table class="table">
-        <th>Type de compte:</th>
-        <th>idCompte:</th>
-        <th>Login:</th>
-        <th>Password:</th>
-        <th>Email:</th>
-        <th>Adresse:</th>
-        <th>enable:</th>
-        <th>roles:</th>
-        <tr *ngFor="let c of comptes">
-            <td>{{c.typeCompte}}</td>
-            <td>{{c.idCompte}}</td>
-            <td>{{c.login}}</td>
-            <td>{{c.mdp}}</td>
-            <td>{{c.email}}</td>
-            <td>{{c.adresse}}</td>
-            <td>{{c.enable}}</td>
-            <td>{{c.roles}}</td>
-            <td class="btn-outline-danger" (click)="delete(c.idCompte)">supprimer</td>
-        </tr>
+    <br>
+    <table class="table table">
+        <thead class="thead-dark">
+            <th>Type de compte:</th>
+            <th>idCompte:</th>
+            <th>Login:</th>
+            <th>Password:</th>
+            <th>Email:</th>
+            <th>Adresse:</th>
+            <th>enable:</th>
+            <th>roles:</th>
+            <th></th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let c of comptes" class="bg-light">
+                <td>{{c.typeCompte}}</td>
+                <td>{{c.idCompte}}</td>
+                <td>{{c.login}}</td>
+                <td>{{c.mdp}}</td>
+                <td>{{c.email}}</td>
+                <td>{{c.adresse}}</td>
+                <td>{{c.enable}}</td>
+                <td>{{c.roles}}</td>
+                <td><button class="btn-outline-danger" (click)="delete(c.idCompte)">Supprimer</button></td>
+            </tr>
+        </tbody>
     </table>
 
 </div>

@@ -3,19 +3,24 @@
     <div>
         <button class="btn btn-info" [routerLink]="['/offre','add']">Ajout offre</button>
     </div>
-    <table class="table">
-        <th>ID Offre:</th>
-        <th>Artisan:</th>
-        <th>Service:</th>
-        <th>Metier:</th>
-        <tr *ngFor="let o of offres">
-            <td>{{o.idOffre}}</td>
-            <td>{{o.artisan.email}}</td>
-            <td>{{o.service.nomService}}</td>
-            <td>{{o.metier.titreMetier}}</td>
-            <td><button class="=btn btn-outline-info" [routerLink]="['/offre','edit' , o.idOffre]" >Editer l'offre</button></td>
-            <td class="btn-outline-danger" (click)="delete(o.idOffre)">Supprimer</td>
-        </tr>
+    <table class="table table">
+        <thead class="thead-dark">
+            <th>ID Offre:</th>
+            <th>Artisan:</th>
+            <th>Service:</th>
+            <th>Metier:</th>
+            <th colspan="2"></th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let o of offres" class="bg-light">
+                <td>{{o.idOffre}}</td>
+                <td>{{o.artisan.email}}</td>
+                <td>{{o.service.nomService}}</td>
+                <td>{{o.metier.titreMetier}}</td>
+                <td><button class="=btn btn-outline-info" [routerLink]="['/offre','edit' , o.idOffre]" >Editer l'offre</button></td>
+                <td class="btn-outline-danger" (click)="delete(o.idOffre)">Supprimer</td>
+            </tr>
+        </tbody>
     </table>
 
 </div>
