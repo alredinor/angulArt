@@ -51,7 +51,7 @@ export class DemandeService {
     return this.http.post(this.url + '/addDemande', o, this.options);
   }
 
-  public edit(demande: Demande, id: number): Observable<any> {
+  public edit(demande: Demande, idDemande: number): Observable<any> {
     this.findById(demande.idDemande);
     const  o: object = {
       client: {idCompte: demande.client},
@@ -62,7 +62,7 @@ export class DemandeService {
 
     };
     console.log(demande.idDemande);
-    return this.http.put(this.url + '/' +  id, o, this.options);
+    return this.http.put(this.url + '/' +  idDemande, o, this.options);
 
   }
 
