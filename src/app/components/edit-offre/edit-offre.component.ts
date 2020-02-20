@@ -18,9 +18,9 @@ export class EditOffreComponent implements OnInit {
 
   constructor(private router: Router, private activatedRoute: ActivatedRoute, private offreService: OffreService) {
     this.activatedRoute.params.subscribe(params => {
-      if (params.index) {
-        this.offre.idOffre = params.index;
-        this.offre = this.offreService.findAll()[params.index];
+      if (params.idOffre) {
+        this.offre.idOffre = params.idOffre;
+        this.offre = this.offreService.findAll()[params.idOffre];
         this.offreOld = new Offre(this.offre.idOffre, this.offre.service, this.offre.metier, this.offre.artisan);
         console.log(this);
       }
@@ -28,13 +28,17 @@ export class EditOffreComponent implements OnInit {
   }
 
   public save() {
-   this.activatedRoute.paramMap.subscribe(param => {
-      this.offreService.edit(this.offre, param.params.idOffre).subscribe(resutlt => {this.router.navigate(['/offre']);
-    })
+   // this.activatedRoute.paramMap.subscribe(param => {
+   //    this.offreService.edit(this.offre, param.params.idOffre).subscribe(resutlt => {this.router.navigate(['/offre']);
+   //  });
+
+    this.offreService.edit(this.offre, this.offre.idOffre).subscribe(resutlt => {
+      this.router.navigate(['/offre']);
     });
+
   }
 
-  ngOnInit() {
+  ngOnInit(){
   }
 
 }
