@@ -10,6 +10,7 @@ import {Compte} from '../../model/compte';
 })
 export class LoginComponent implements OnInit {
 
+  private login = '../../../assets/images/login/login2.png'
   private compte: Compte = new Compte();
 
   private erreur = false;
@@ -37,4 +38,11 @@ export class LoginComponent implements OnInit {
   //   console.log('Tentative de connexion');
   // }
 
+  public addArtisan() {
+    this.router.navigate(['compte/addArtisan']);
+  }
+
+  public addClient() {
+    this.router.navigate(['compte/addClient']);
+  }
 }
