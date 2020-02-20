@@ -44,5 +44,5 @@ export const routes: Route[] = [
     {path: 'offre/add', component: AddOffreComponent},
     {path: 'error/login', component: ErreurAuthentificationComponent},
     {path: 'compte/edit/:idCompte', component: EditCompteComponent},
-    {path: 'offre/edit/:idOffre', component: EditOffreComponent}
+    {path: 'offre/edit/:offre.idOffre', component: EditOffreComponent}
 ]

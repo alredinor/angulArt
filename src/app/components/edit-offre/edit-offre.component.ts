@@ -17,12 +17,12 @@ export class EditOffreComponent implements OnInit {
   private  offreOld: Offre = null;
 
   constructor(private router: Router, private activatedRoute: ActivatedRoute, private offreService: OffreService) {
-    this.activatedRoute.params.subscribe(params => {
-      if (params.idOffre) {
-        this.offre.idOffre = params.idOffre;
-        this.offre = this.offreService.findAll()[params.idOffre];
+    this.activatedRoute.queryParams.subscribe(params => {
+      this.offre.idOffre = params[this.offre];
+      if (params.offre.idOffre) {
+        this.offre.idOffre = params.offre.idOffre;
+        this.offre = this.offreService.findAll()[params.offre.idOffre];
         this.offreOld = new Offre(this.offre.idOffre, this.offre.service, this.offre.metier, this.offre.artisan);
-        console.log(this);
       }
     });
   }
@@ -33,7 +33,7 @@ export class EditOffreComponent implements OnInit {
    //  });
 
     this.offreService.edit(this.offre, this.offre.idOffre).subscribe(resutlt => {
-      this.router.navigate(['/offre']);
+      this.router.navigate(['/offre/edit']);
     });
 
   }
