@@ -14,7 +14,7 @@ export class LogoutComponent implements OnInit {
   }
   // deconnection
   public logout() {
-    return sessionStorage.removeItem('token');
-    this.router.navigate(['/home']);
+    sessionStorage.removeItem('token');
+    this.router.navigate(['login']);
   }
 }

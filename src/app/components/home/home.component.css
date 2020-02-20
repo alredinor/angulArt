@@ -8,11 +8,10 @@ p {
 }
 .outer-div
 {
-  padding: 50px;
+  padding: 0;
   text-align: center;
 
 }
-
 .center-div{
   margin: 0 auto;
 
@@ -21,13 +20,10 @@ p {
 .inner-div
 {
   display: inline-block;
-  padding: 5px;
+  padding: 0;
   background: rgba(255, 255, 255, 0.5);
-
-  /*opacity: 0.4;*/
   border-radius: 3px;
 }
-
 h2{
   font-family: Arial;
   font-size: 1.6rem;
@@ -36,8 +32,9 @@ h2{
   letter-spacing: 0.1rem;
   margin-top: 50px;
   font-weight: normal;
-
 }
-/*.opacity{*/
-/*  opacity: 1 !important;*/
-/*}*/
+#titre{
+    text-align: center;
+    background-color: azure;
+    border-radius: 10px;
+}
