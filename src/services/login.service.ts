@@ -10,13 +10,13 @@ export class LoginService {
 
   private url = 'http://localhost:8080/art/rest/login';
 
-  constructor(private  http: HttpClient, private loginService: LoginService) { }
+  constructor(private  http: HttpClient) { }
 
   public login(compte: Compte): Observable<any> {
     const headers: HttpHeaders = new HttpHeaders(
       {
         'Content-type': 'application/json',
-        Authorization: 'Basic ' + btoa(`${compte.login}:${compte.mdp}`)
+        'Authorization': 'Basic ' + btoa(`${compte.login}:${compte.mdp}`)
       });
     const options: object = {
       headers: headers

@@ -1,13 +1,11 @@
-<<<<<<< HEAD
 h1{
     text-align: center;
     color: green;
 }
-p{
+p {
     text-align: center;
     color: beige;
-=======
-
+}
 .outer-div
 {
   padding: 50px;
@@ -24,7 +22,9 @@ p{
 {
   display: inline-block;
   padding: 5px;
-  background-color: #ccc;
+  background: rgba(255, 255, 255, 0.5);
+
+  /*opacity: 0.4;*/
   border-radius: 3px;
 }
 
@@ -36,5 +36,8 @@ h2{
   letter-spacing: 0.1rem;
   margin-top: 50px;
   font-weight: normal;
->>>>>>> 99338743f2fa60132480dbb0641047b13073f90a
+
 }
+/*.opacity{*/
+/*  opacity: 1 !important;*/
+/*}*/

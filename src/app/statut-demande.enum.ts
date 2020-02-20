@@ -1,3 +1,5 @@
 export enum StatutDemande {
-    'Valide', 'En_attente', 'Terminé'
+    Valide= 'Validé',
+    En_attente= 'En attente',
+    Termine= 'Terminé'
 }

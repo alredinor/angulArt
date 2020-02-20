@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute, convertToParamMap, Router} from '@angular/router';
 import {DemandeService} from '../../../services/demande.service';
 import {Demande} from '../../model/demande';
+import {StatutDemande} from '../../statut-demande.enum';
 
 @Component({
   selector: 'app-edit-demande',
@@ -12,7 +13,7 @@ export class EditDemandeComponent implements OnInit {
 
   private demande: Demande = new Demande();
   private demandeOld: Demande = null;
-  private index: number;
+  private statut: StatutDemande;
 
 
   constructor(private router: Router, private activatedRoute: ActivatedRoute, private demandeService: DemandeService) {

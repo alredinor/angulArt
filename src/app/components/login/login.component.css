@@ -4,3 +4,23 @@
 h2{
     text-align: center;
 }
+#login{
+    max-width: 200px;
+    max-height: 150px;
+    position: center;
+}
+#identifiant{
+    color: blue;
+}
+p{
+    color: chartreuse;
+}
+#ins{
+     color: black;
+ }
+#client{
+    color: white;
+}
+#artisan{
+    color: red;
+}
