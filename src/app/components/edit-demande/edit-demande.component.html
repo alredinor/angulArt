@@ -16,7 +16,7 @@
     </div>
         <div class="form-group">
             Statut:<select class="form-control" [(ngModel)]="demande.statut">
-            <option>{{demande.statut}}</option>
+            <option *ngFor="let s of demande.statut" [value]="s" [label]="statut[s]"></option>
         </select>
         </div>
     <div class="form-group">
