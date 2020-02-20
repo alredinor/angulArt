@@ -37,4 +37,11 @@ export class LoginComponent implements OnInit {
   //   console.log('Tentative de connexion');
   // }
 
+  public addArtisan() {
+    this.router.navigate(['compte/addArtisan']);
+  }
+
+  public addClient() {
+    this.router.navigate(['compte/addClient']);
+  }
 }
