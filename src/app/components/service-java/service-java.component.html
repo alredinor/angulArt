@@ -17,7 +17,7 @@
             <tr *ngFor="let s of services" class="bg-light">
                 <td>{{s.idService}}</td>
                 <td>{{s.nomService}}</td>
-                <td>{{s.metier}}</td>
+                <td>{{s.metier.titreMetier}}</td>
                 <td><button class="=btn btn-outline-primary" [routerLink]="['/service','edit', s.idService]" >Editer</button></td>
                 <td><button class="=btn btn-outline-danger"  (click)="delete(s.idService)">Supprimer</button></td>
             </tr>

@@ -19,7 +19,7 @@ export class AddArtisanComponent implements OnInit {
 
   public saveArtisan() {
     this.compteService.insertArtisan(this.artisan).subscribe(result => {
-      this.router.navigate(['/compte']);
+      this.router.navigate(['/login']);
     });
   }
 
