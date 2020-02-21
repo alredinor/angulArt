@@ -29,13 +29,13 @@ export class EditDemandeComponent implements OnInit {
   }
   public save() {
 
-    this.demandeService.edit(this.demande, this.demande.idDemande).subscribe(resutlt => {
-      this.router.navigate(['/demande']);
-    });
-    // this.activatedRoute.paramMap.subscribe(param => {
-    //   this.demandeService.edit(this.demande, param.params.idDemande).subscribe(resutlt => {this.router.navigate(['/demande']);
-    //   });
-    //  });
+    // this.demandeService.edit(this.demande, this.demande.idDemande).subscribe(resutlt => {
+    //   this.router.navigate(['/demande']);
+    // });
+    this.activatedRoute.paramMap.subscribe(param => {
+      this.demandeService.edit(this.demande, param.params.idDemande).subscribe(resutlt => {this.router.navigate(['/demande']);
+      });
+     });
   }
 
   public cancel() {
